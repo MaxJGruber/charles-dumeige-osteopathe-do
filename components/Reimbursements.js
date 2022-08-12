@@ -19,7 +19,7 @@ export default function Reimbursements() {
             type="button"
             href="https://www.osteopathie.org/mutuelles.html"
             target="_blank"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
           >
             Voir les mutuelles qui remboursent
           </button>
