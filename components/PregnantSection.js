@@ -41,8 +41,8 @@ const PregnantSection = () => (
               />
             </svg>
           </div>
-          <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
-            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden">
+          <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:pt-20 lg:pb-12">
+            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
                 src="static/istock-images/pregnant_small.jpeg"
@@ -55,18 +55,18 @@ const PregnantSection = () => (
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-20">
-            <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-xl">
+            <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               La prise en charge ostéopathique de la femme enceinte
             </h2>
-            <div className="mt-6 text-gray-500 space-y-6">
-              <p className="text-xl">
+            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+              <p>
                 Durant la grossesse, le corps s'adapte en fonction du
                 développement de l'enfant in utéro. Cela aura un impact sur les
                 forces réparties dans le corps au niveau des charnières, des
                 vertèbres pivot ainsi que sur les courbures (lordoses,
                 cyphoses).
               </p>
-              <p className="text-xl">
+              <p>
                 Le bassin aussi se modèle et d'autres changements mécaniques et
                 physiologiques se manifestent. L'ostéopathie est recommandée
                 pour rééquilibrer le corps face à ces changements, en utilisant
@@ -77,11 +77,11 @@ const PregnantSection = () => (
         </div>
       </div>
     </div>
-    <div className="py-16 xl:py-10 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+    <div className="py-16 xl:py-0  px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-max lg:max-w-7xl mx-auto">
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
           <div className="text-base max-w-prose lg:max-w-none">
-            <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-xl">
+            <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-xl">
               L'ostéopathie durant la grossesse et prévenir l'apparition de
               douleurs
             </h2>
@@ -155,7 +155,7 @@ const PregnantSection = () => (
             />
           </svg>
           <div className="relative md:bg-white md:p-6">
-            <div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
+            <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
               <p>
                 Parfois le corps n'arrive pas à s'adapter face à ces changements
                 et les douleurs apparaissent. Elles peuvent être sous-jacentes à

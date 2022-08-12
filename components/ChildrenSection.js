@@ -41,8 +41,8 @@ const ChildrenSection = () => (
               />
             </svg>
           </div>
-          <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
-            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden">
+          <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:pt-20 lg:pb-12">
+            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
                 src="static/istock-images/childelbow_small.jpeg"
@@ -55,25 +55,35 @@ const ChildrenSection = () => (
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-20">
-            <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-xl">
+            <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               L'ostéopathie pour les enfants & adolescents
             </h2>
-            <div className="mt-6 text-gray-500 space-y-6">
-              <p className="text-xl">
+            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+              <p>
                 L'ostéopathie chez les enfants et adolescents est adaptée et
                 recommandée pour différents motifs semblables à l'adulte.
               </p>
-              <p className="text-xl">
+              <p>
                 Cependant les troubles de la statique sont plus fréquents à ces
                 âges et peuvent entraîner des dysfonctions au niveau des
                 courbures rachidiennes (cyphoses et lordoses).
               </p>
-              <p className="text-xl">
+              <p>
                 Elles sont souvent dues à une mauvaise adaptation du corps par
                 rapport à la croissance ou bien encore des troubles posturaux
                 avec les sacs à dos lourd et mauvaise assise pendant les cours.
               </p>
-              <p className="text-xl">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="py-16 xl:py-0 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+      <div className="max-w-max lg:max-w-7xl mx-auto">
+        <div className="relative">
+          <div className="relative md:bg-white md:p-6">
+            <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+              <p>
                 Votre ostéopathe Charles Dumeige emploiera des techniques
                 ostéopathiques adaptées en fonction de l'âge (3-14 ans pour les
                 enfants et 14-18 ans pour les adolescents). Il vous procurera
@@ -90,9 +100,9 @@ const ChildrenSection = () => (
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
-          <div className="pt-12 sm:pt-16 lg:pt-20">
-            <div className="mt-6 text-gray-500 space-y-6">
-              <p className="text-xl">
+          <div className="pt-12 sm:pt-16 lg:pt-5">
+            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+              <p>
                 Il est recommandé de consulter une fois par an maximum, en
                 fonction des besoins de l'enfant (bien rester attentif à ses
                 plaintes et anticiper l'apparition de douleurs associées). Un
@@ -101,7 +111,7 @@ const ChildrenSection = () => (
                 sensibiliser à surveiller l'évolution de la croissance de
                 l'enfant.
               </p>
-              <p className="text-xl">
+              <p>
                 En effet, il devra surveiller l'évolution des courbures
                 rachidiennes afin de détecter des possibles apparition de
                 scoliose, pour qu'une prise en charge multidisciplinaire adaptée
@@ -109,20 +119,6 @@ const ChildrenSection = () => (
                 kinésithérapeute fortement recommandées à ce moment là en
                 complément). L'ostéopathie participe à l'efficacité et à la
                 stabilité du traitement.
-              </p>
-              <p className="text-xl">
-                La vie de l'enfant et adolescents est mouvementée, elle est
-                sujet à la pratique d'activités sportives, où ils peuvent subir
-                des traumatismes et chutes à répétition. Suites à cela, il peut
-                y avoir des tensions tissulaires qui restent et peuvent se
-                réveiller plus tard à cause de la mémoire traumatique.
-              </p>
-              <p className="text-xl">
-                Pour que la croissance se fasse plus harmonieuse, et aider le
-                corps à se rétablir face aux traumatismes, un suivi
-                ostéopathique régulier est important lors d'une pratique
-                d'activité sportive régulière ou une activité source de
-                micro-traumatismes (rugby, arts martiaux, équitation).
               </p>
             </div>
           </div>
@@ -166,14 +162,36 @@ const ChildrenSection = () => (
               />
             </svg>
           </div>
-          <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
-            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden">
+          <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:pt-10">
+            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
                 src="static/istock-images/childleg_small.jpeg"
                 alt=""
               />
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="py-16 xl:py-0 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+      <div className="max-w-max lg:max-w-7xl mx-auto">
+        <div className="relative md:bg-white md:p-6">
+          <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+            <p>
+              La vie de l'enfant et adolescents est mouvementée, elle est sujet
+              à la pratique d'activités sportives, où ils peuvent subir des
+              traumatismes et chutes à répétition. Suites à cela, il peut y
+              avoir des tensions tissulaires qui restent et peuvent se réveiller
+              plus tard à cause de la mémoire traumatique.
+            </p>
+            <p>
+              Pour que la croissance se fasse plus harmonieuse, et aider le
+              corps à se rétablir face aux traumatismes, un suivi ostéopathique
+              régulier est important lors d'une pratique d'activité sportive
+              régulière ou une activité source de micro-traumatismes (rugby,
+              arts martiaux, équitation).
+            </p>
           </div>
         </div>
       </div>

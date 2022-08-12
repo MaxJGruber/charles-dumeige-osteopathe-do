@@ -42,7 +42,7 @@ const SportsSection = () => (
             </svg>
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
-            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden">
+            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
                 src="static/istock-images/sportsman_small.jpeg"
@@ -54,23 +54,23 @@ const SportsSection = () => (
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-20">
-            <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-xl">
+            <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               La prise en charge ostéopathique des sportifs
             </h2>
-            <div className="mt-6 text-gray-500 space-y-6">
-              <p className="text-xl">
+            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+              <p>
                 Votre ostéopathe Charles Dumeige reçoit les sportifs de tout
                 niveau à son cabinet. Il est recommandé de consulter
                 régulièrement suite à un nombre de contraintes subies à plus ou
                 moins forte intensité et fréquence de pratique.
               </p>
-              <p className="text-xl">
+              <p>
                 Les séances auront un deuxième objectif parallèle de prévention,
                 c'est-à-dire de prévenir l'apparition de blessures, renforcer la
                 capacité de récupération, ou encore de favoriser l'augmentation
                 des performances du sportif concerné.
               </p>
-              <p className="text-xl">
+              <p>
                 Il sera important d'être le plus précis possible auprès de votre
                 ostéopathe sur la pratique du sport, pour une prise en charge la
                 plus adaptée que ce soit au niveau débutant ou expérimenté.
@@ -84,115 +84,47 @@ const SportsSection = () => (
       <div className="max-w-max lg:max-w-7xl mx-auto">
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
           <div className="text-base max-w-prose lg:max-w-none">
-            <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-xl">
+            <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-xl">
               L'ostéopathie est adaptée à tous les sports
             </h2>
           </div>
         </div>
-        <div className="relative">
-          <svg
-            className="hidden md:block absolute top-0 right-0 -mt-20 -mr-20"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="95e8f2de-6d30-4b7e-8159-f791729db21b"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={384}
-              fill="url(#95e8f2de-6d30-4b7e-8159-f791729db21b)"
-            />
-          </svg>
-          <svg
-            className="hidden md:block absolute bottom-0 left-0 -mb-20 -ml-20"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="7a00fe67-0343-4a3c-8e81-c145097a3ce0"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={384}
-              fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)"
-            />
-          </svg>
-          <div className="relative md:bg-white md:p-6">
-            <div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
-              <p>
-                Pendant la pratique de sport, tout le corps sera déséquilibré et
-                l'ensemble des structures est sollicité (articulations, muscles,
-                ligaments). Suite à cela, il peut y avoir des sursollicitations
-                qui entraîneront des décompensations et provoquent des
-                blessures. Dans ce cas là, il est recommandé de consulter votre
-                ostéopathe.
-              </p>
-              <p>
-                Votre ostéopathe Charles Dumeige a connaissance d'une multitude
-                de sports et de leur pratique et les zones qui s'adaptent le
-                plus en fonction de chacun.
-              </p>
-              <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-xl">
-                L'ostéopathie est adaptée à tous les sports
-              </h2>
-              <p>
-                Un bon équilibre corporel permet de mieux gérer ces
-                sursollicitations face aux efforts demandés, ce qui entraînera
-                une meilleure récupération. La séance favorise un bon
-                fonctionnement physiologique indispensable au sportif, il pourra
-                également libérer les structures liées à la respiration en
-                travaillant sur les diaphragmes ou les muscles inspirateurs.
-              </p>
-              <p>
-                Une bonne séance de rééquilibration juste avant une compétition
-                favorise les performances afin d'obtenir de meilleurs résultats,
-                en plus du suivi régulier.
-              </p>
-              <p>
-                Votre ostéopathe Charles Dumeige a traité de nombreux sportifs
-                de tout type pendant des stages lors de compétitions à visée
-                nationale et européenne.
-              </p>
-            </div>
+
+        <div className="relative md:bg-white md:p-6">
+          <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+            <p>
+              Pendant la pratique de sport, tout le corps sera déséquilibré et
+              l'ensemble des structures est sollicité (articulations, muscles,
+              ligaments). Suite à cela, il peut y avoir des sursollicitations
+              qui entraîneront des décompensations et provoquent des blessures.
+              Dans ce cas là, il est recommandé de consulter votre ostéopathe.
+            </p>
+            <p>
+              Votre ostéopathe Charles Dumeige a connaissance d'une multitude de
+              sports et de leur pratique et les zones qui s'adaptent le plus en
+              fonction de chacun.
+            </p>
+            <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-xl">
+              L'ostéopathie est adaptée à tous les sports
+            </h2>
+            <p>
+              Un bon équilibre corporel permet de mieux gérer ces
+              sursollicitations face aux efforts demandés, ce qui entraînera une
+              meilleure récupération. La séance favorise un bon fonctionnement
+              physiologique indispensable au sportif, il pourra également
+              libérer les structures liées à la respiration en travaillant sur
+              les diaphragmes ou les muscles inspirateurs.
+            </p>
+            <p>
+              Une bonne séance de rééquilibration juste avant une compétition
+              favorise les performances afin d'obtenir de meilleurs résultats,
+              en plus du suivi régulier.
+            </p>
+            <p>
+              Votre ostéopathe Charles Dumeige a traité de nombreux sportifs de
+              tout type pendant des stages lors de compétitions à visée
+              nationale et européenne.
+            </p>
           </div>
         </div>
       </div>

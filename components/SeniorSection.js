@@ -42,7 +42,7 @@ const SeniorSection = () => (
             </svg>
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
-            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden">
+            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
                 src="static/istock-images/seniorman_small.jpeg"
@@ -55,11 +55,11 @@ const SeniorSection = () => (
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-20">
-            <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-xl">
+            <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               La prise en charge ostéopathique des séniors
             </h2>
-            <div className="mt-6 text-gray-500 space-y-6">
-              <p className="text-xl">
+            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+              <p>
                 Avec les années passées, le quotidien des seniors apparaît plus
                 compliqué dans les gestes de tous les jours, avec des raideurs
                 naissantes et une souplesse diminuée. Il faut ajouter à cela
@@ -67,7 +67,7 @@ const SeniorSection = () => (
                 musculo-ligamentaires. Tout cela amène des dysfonctions de
                 mobilité et des douleurs aiguës ou chroniques.
               </p>
-              <p className="text-xl">
+              <p>
                 Vous pouvez consulter votre ostéopathe Charles Dumeige pour vos
                 douleurs articulaires. Des séances régulières permettent un
                 entretien général et de gagner en souplesse générale.
@@ -80,12 +80,12 @@ const SeniorSection = () => (
       </div>
     </div>
     <div className="relative bg-white">
-      <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6  lg:max-w-7xl ">
-        <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-xl">
+      <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl">
+        <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-xl">
           L'ostéopathie en prévention des douleurs
         </h2>
-        <div className="mt-6 text-gray-500 space-y-6">
-          <p className="text-xl">
+        <div className="prose-xl mt-6 text-gray-500">
+          <p>
             Les séances d'ostéopathie peuvent diminuer les douleurs articulaires
             vertébrales ou périphériques, souvent dues à l'arthrose. Le
             processus consistera à veiller à la bonne mobilité de ces
@@ -93,7 +93,7 @@ const SeniorSection = () => (
             L'ostéopathie ne pourra totalement diminuer les douleurs dues au
             vieillissement, mais celle-ci aidera à les atténuer au maximum.
           </p>
-          <p className="text-xl">
+          <p>
             Votre ostéopathe Charles Dumeige vous prendra en charge le mieux
             possible et rendra votre quotidien meilleur.
           </p>
@@ -102,9 +102,9 @@ const SeniorSection = () => (
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
-          <div className="pt-12 sm:pt-16 lg:pt-15">
-            <div className="mt-6 text-gray-500 space-y-6">
-              <p className="text-xl">
+          <div className="pt-12 sm:pt-16 lg:pt-0">
+            <div className="prose-xl mt-6 text-gray-500 space-y-6">
+              <p>
                 Tout comme le système musculo-ligamentaire, les organes mous du
                 système viscéral peuvent perdre en mobilité et entraîner un
                 perte d'élasticité de leurs fascias associés. Dès lors, le
@@ -113,7 +113,7 @@ const SeniorSection = () => (
                 ballonnements, et autres douleurs viscérales et de leurs
                 vertèbres associées.
               </p>
-              <p className="text-xl">
+              <p>
                 Votre ostéopathe Charles Dumeige travaillera sur les tissus de
                 cette sphère pour regagner en mobilité intrinsèque qui aura pour
                 conséquence un meilleur fonctionnement digestif. Les autres
@@ -163,7 +163,7 @@ const SeniorSection = () => (
             </svg>
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
-            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden">
+            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
                 src="static/istock-images/seniorwoman_small.jpeg"
