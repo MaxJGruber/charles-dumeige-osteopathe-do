@@ -4,11 +4,9 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Accueil", href: "/" },
   { name: "Présentations", href: "/presentations" },
   { name: "Patients", href: "/patients" },
   { name: "Contact & Informations", href: "/contact" },
-  { name: "Galerie", href: "galerie" },
 ];
 
 const HeroSection = () => (
@@ -32,12 +30,12 @@ const HeroSection = () => (
               aria-label="Global"
             >
               <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                <div className="flex items-center justify-between w-full md:w-auto">
-                  <a href="#">
+                <div className="flex items-center justify-between h-full w-full md:w-auto">
+                  <a href="/">
                     <span className="sr-only">Logo</span>
                     <img
                       alt="Logo"
-                      className="h-8 w-auto sm:h-10"
+                      className="h-8 w-auto sm:h-28"
                       src="static/logo.jpg"
                     />
                   </a>
