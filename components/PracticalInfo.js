@@ -56,20 +56,37 @@ export default function Example() {
             {features.map((feature) => (
               <div key={feature.name} className="relative">
                 <dt className="flex items-center">
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-lightblue text-white">
+                  <div
+                    className={`absolute flex items-center justify-center h-12 w-12 rounded-md ${
+                      feature.isWarning ? "bg-yellow-500" : "bg-lightblue"
+                    } text-white`}
+                  >
                     <FontAwesomeIcon icon={feature.icon} size="2x" />
                   </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  <p
+                    className={`ml-16 text-lg leading-6 font-medium ${
+                      feature.isWarning ? "text-yellow-500" : "text-gray-900"
+                    }`}
+                  >
                     {feature.name}
+                    {feature.isCreditCard && (
+                      <>
+                        {" "}
+                        (
+                        <span className="mx-1">
+                          <FontAwesomeIcon icon={faCcMastercard} size="lg" />
+                        </span>
+                        <span className="mx-1">
+                          <FontAwesomeIcon icon={faCcVisa} size="lg" />
+                        </span>
+                        <span className="mx-1">
+                          <FontAwesomeIcon icon={faCcAmex} size="lg" />
+                        </span>
+                        )
+                      </>
+                    )}
                   </p>
                 </dt>
-                {feature.isCreditCard && (
-                  <dd class="flex items-center text-base text-gray-500">
-                    <FontAwesomeIcon icon={faCcMastercard} size="1x" />
-                    <FontAwesomeIcon icon={faCcVisa} size="1x" />
-                    <FontAwesomeIcon icon={faCcAmex} size="1x" />
-                  </dd>
-                )}
               </div>
             ))}
           </dl>
