@@ -4,6 +4,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // fontFamily: {
+    //   display: ["Oswald"],
+    //   body: ["Avenir"],
+    // },
     extend: {
       colors: {
         darkblue: "#21556d",
@@ -11,5 +15,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
