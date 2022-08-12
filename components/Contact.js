@@ -1,19 +1,21 @@
 import { CheckIcon } from "@heroicons/react/outline";
 
-const transferFeatures = [
+const PARIS_ADDRESS = [
   {
     id: 1,
-    name: "49 Rue de la Tour, 75116, Paris ",
+    name: "49 Rue de la Tour, 75116, Paris",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+    googleMapsLink: "https://goo.gl/maps/ziF1d5N5TbuS1VA59",
   },
 ];
-const communicationFeatures = [
+const SARTROUVILLE_ADDRESS = [
   {
     id: 1,
     name: "20 Rue René Brûlay, 78500, Sartrouville",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+    googleMapsLink: "https://goo.gl/maps/4mhDD2yna4iP3xru9",
   },
 ];
 
@@ -67,7 +69,7 @@ export default function Featured() {
         <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div className="relative">
             <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-              A Paris...
+              À Sartrouville...
             </h3>
             <p className="mt-3 text-lg text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
@@ -77,7 +79,7 @@ export default function Featured() {
             </p>
 
             <dl className="mt-10 space-y-10">
-              {transferFeatures.map((item) => (
+              {SARTROUVILLE_ADDRESS.map((item) => (
                 <div key={item.id} className="relative">
                   <dt>
                     <CheckIcon
@@ -91,12 +93,14 @@ export default function Featured() {
                   <dd className="mt-2 ml-9 text-base text-gray-500">
                     {item.description}
                   </dd>
-                  <button
-                    type="button"
-                    className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
-                  >
-                    Plannifiez votre itinéraire
-                  </button>
+                  <a href={item.googleMapsLink}>
+                    <button
+                      type="button"
+                      className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
+                    >
+                      Plannifiez votre itinéraire
+                    </button>
+                  </a>
                 </div>
               ))}
             </dl>
@@ -182,7 +186,7 @@ export default function Featured() {
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="lg:col-start-2">
               <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-                ...et à Sartrouville.
+                ...et à Paris!
               </h3>
               <p className="mt-3 text-lg text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
@@ -191,7 +195,7 @@ export default function Featured() {
               </p>
 
               <dl className="mt-10 space-y-10">
-                {communicationFeatures.map((item) => (
+                {PARIS_ADDRESS.map((item) => (
                   <div key={item.id} className="relative">
                     <dt>
                       <CheckIcon
@@ -205,12 +209,14 @@ export default function Featured() {
                     <dd className="mt-2 ml-9 text-base text-gray-500">
                       {item.description}
                     </dd>
-                    <button
-                    type="button"
-                    className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
-                  >
-                    Plannifiez votre itinéraire
-                  </button>
+                    <a href={item.googleMapsLink}>
+                      <button
+                        type="button"
+                        className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
+                      >
+                        Plannifiez votre itinéraire
+                      </button>
+                    </a>
                   </div>
                 ))}
               </dl>
