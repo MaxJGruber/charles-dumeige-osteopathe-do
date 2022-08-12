@@ -2,6 +2,7 @@ import "styles/globals.css";
 import { DefaultSeo } from "next-seo";
 import NextNProgress from "nextjs-progressbar";
 import { TITLE, META_DESCRIPTION, URL, META_IMAGE } from "root/config";
+import Footer from "components/Footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }) {
       />
       <NextNProgress />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
