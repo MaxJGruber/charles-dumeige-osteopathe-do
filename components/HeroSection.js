@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
+import Fade from "react-reveal/Fade";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
@@ -143,11 +144,13 @@ const HeroSection = () => (
       </div>
     </div>
     <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img
-        className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-        src="static/cover.png"
-        alt=""
-      />
+      <Fade left>
+        <img
+          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+          src="static/cover.png"
+          alt=""
+        />
+      </Fade>
     </div>
   </div>
 );
