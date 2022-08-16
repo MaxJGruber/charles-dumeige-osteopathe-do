@@ -1,4 +1,9 @@
+import dynamic from "next/dynamic";
 import { CheckIcon } from "@heroicons/react/outline";
+
+const Map = dynamic(() => import("components/Map"), {
+  ssr: false,
+});
 
 const PARIS_ADDRESS = [
   {
@@ -96,7 +101,7 @@ export default function Featured() {
                   <a href={item.googleMapsLink}>
                     <button
                       type="button"
-                      className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
+                      className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
                     >
                       Plannifiez votre itinéraire
                     </button>
@@ -139,12 +144,9 @@ export default function Featured() {
                 fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
               />
             </svg>
-            <img
-              className="relative mx-auto"
-              width={490}
-              src="https://tailwindui.com/img/features/feature-example-1.png"
-              alt=""
-            />
+            <div className="relative mx-auto">
+              <Map coordinates={[48.93587430271724, 2.1631031634520994]} />
+            </div>
           </div>
         </div>
 
@@ -193,7 +195,6 @@ export default function Featured() {
                 ex obcaecati natus eligendi delectus, cum deleniti sunt in
                 labore nihil quod quibusdam expedita nemo.
               </p>
-
               <dl className="mt-10 space-y-10">
                 {PARIS_ADDRESS.map((item) => (
                   <div key={item.id} className="relative">
@@ -212,7 +213,7 @@ export default function Featured() {
                     <a href={item.googleMapsLink}>
                       <button
                         type="button"
-                        className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
+                        className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
                       >
                         Plannifiez votre itinéraire
                       </button>
@@ -256,12 +257,9 @@ export default function Featured() {
                   fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
                 />
               </svg>
-              <img
-                className="relative mx-auto"
-                width={490}
-                src="https://tailwindui.com/img/features/feature-example-2.png"
-                alt=""
-              />
+              <div className="relative mx-auto">
+                <Map coordinates={[48.860504499146764, 2.2801899629124613]} />
+              </div>
             </div>
           </div>
         </div>
