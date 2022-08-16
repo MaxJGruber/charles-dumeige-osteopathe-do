@@ -47,7 +47,7 @@ const AboutJob = () => (
             <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
-                src="static/istock-images/baby_small.jpeg"
+                src="static/about-job-pic.jpeg"
                 alt=""
               />
             </div>
