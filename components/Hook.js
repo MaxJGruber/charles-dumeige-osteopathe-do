@@ -10,6 +10,7 @@ const Hook = () => (
           <a
             href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
             target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-lightblue hover:bg-darkblue"
           >
             Prenez RDV sur doctolib.fr
@@ -18,6 +19,7 @@ const Hook = () => (
         <div className="ml-3 inline-flex rounded-md shadow">
           <a
             href="tel:0638697716"
+            rel="noreferrer"
             className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-lightblue hover:bg-lightblueHover hover:text-darkblue bg-white hook-btn2"
           >
             Appelez le 06 38 69 77 16
