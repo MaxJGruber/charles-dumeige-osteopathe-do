@@ -58,7 +58,7 @@ const SeniorSection = () => (
             <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               La prise en charge ostéopathique des séniors
             </h2>
-            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+            <div className="prose prose-lg mt-6 text-gray-500 space-y-6">
               <p>
                 Avec les années passées, le quotidien des seniors apparaît plus
                 compliqué dans les gestes de tous les jours, avec des raideurs
@@ -84,7 +84,7 @@ const SeniorSection = () => (
         <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-xl">
           L'ostéopathie en prévention des douleurs
         </h2>
-        <div className="prose-xl mt-6 text-gray-500">
+        <div className="prose-lg mt-6 text-gray-500">
           <p>
             Les séances d'ostéopathie peuvent diminuer les douleurs articulaires
             vertébrales ou périphériques, souvent dues à l'arthrose. Le
@@ -103,7 +103,7 @@ const SeniorSection = () => (
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-0">
-            <div className="prose-xl mt-6 text-gray-500 space-y-6">
+            <div className="prose-lg mt-6 text-gray-500 space-y-6">
               <p>
                 Tout comme le système musculo-ligamentaire, les organes mous du
                 système viscéral peuvent perdre en mobilité et entraîner un

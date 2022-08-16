@@ -57,7 +57,7 @@ const SportsSection = () => (
             <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               La prise en charge ostéopathique des sportifs
             </h2>
-            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+            <div className="prose prose-lg mt-6 text-gray-500 space-y-6">
               <p>
                 Votre ostéopathe Charles Dumeige reçoit les sportifs de tout
                 niveau à son cabinet. Il est recommandé de consulter
@@ -89,9 +89,8 @@ const SportsSection = () => (
             </h2>
           </div>
         </div>
-
         <div className="relative md:bg-white md:p-6">
-          <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+          <div className="prose prose-lg text-gray-500 lg:max-w-none">
             <p>
               Pendant la pratique de sport, tout le corps sera déséquilibré et
               l'ensemble des structures est sollicité (articulations, muscles,
@@ -105,7 +104,7 @@ const SportsSection = () => (
               fonction de chacun.
             </p>
             <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-xl">
-              L'ostéopathie est adaptée à tous les sports
+              L'ostéopathie pour se dépasser et préparer les compétitions
             </h2>
             <p>
               Un bon équilibre corporel permet de mieux gérer ces

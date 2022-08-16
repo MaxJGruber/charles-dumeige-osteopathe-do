@@ -24,6 +24,7 @@ const Patients = () => (
     <SeniorSection />
     <Divider />
     <SportsSection />
+    <Divider />
   </>
 );
 

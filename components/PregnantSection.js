@@ -58,7 +58,7 @@ const PregnantSection = () => (
             <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               La prise en charge ostéopathique de la femme enceinte
             </h2>
-            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+            <div className="prose prose-lg mt-6 text-gray-500 space-y-6">
               <p>
                 Durant la grossesse, le corps s'adapte en fonction du
                 développement de l'enfant in utéro. Cela aura un impact sur les
@@ -155,7 +155,7 @@ const PregnantSection = () => (
             />
           </svg>
           <div className="relative md:bg-white md:p-6">
-            <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+            <div className="prose prose-lg text-gray-500 lg:max-w-none">
               <p>
                 Parfois le corps n'arrive pas à s'adapter face à ces changements
                 et les douleurs apparaissent. Elles peuvent être sous-jacentes à

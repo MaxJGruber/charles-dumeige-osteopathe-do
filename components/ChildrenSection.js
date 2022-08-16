@@ -58,7 +58,7 @@ const ChildrenSection = () => (
             <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               L'ostéopathie pour les enfants & adolescents
             </h2>
-            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+            <div className="prose prose-lg mt-6 text-gray-500 space-y-6">
               <p>
                 L'ostéopathie chez les enfants et adolescents est adaptée et
                 recommandée pour différents motifs semblables à l'adulte.
@@ -82,7 +82,7 @@ const ChildrenSection = () => (
       <div className="max-w-max lg:max-w-7xl mx-auto">
         <div className="relative">
           <div className="relative md:bg-white md:p-6">
-            <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+            <div className="prose prose-lg text-gray-500 lg:max-w-none">
               <p>
                 Votre ostéopathe Charles Dumeige emploiera des techniques
                 ostéopathiques adaptées en fonction de l'âge (3-14 ans pour les
@@ -101,7 +101,7 @@ const ChildrenSection = () => (
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-5">
-            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+            <div className="prose prose-lg mt-6 text-gray-500 space-y-6">
               <p>
                 Il est recommandé de consulter une fois par an maximum, en
                 fonction des besoins de l'enfant (bien rester attentif à ses
@@ -177,7 +177,7 @@ const ChildrenSection = () => (
     <div className="py-16 xl:py-0 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-max lg:max-w-7xl mx-auto">
         <div className="relative md:bg-white md:p-6">
-          <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+          <div className="prose prose-lg text-gray-500 lg:max-w-none">
             <p>
               La vie de l'enfant et adolescents est mouvementée, elle est sujet
               à la pratique d'activités sportives, où ils peuvent subir des

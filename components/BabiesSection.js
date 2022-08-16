@@ -57,7 +57,7 @@ const BabiesSection = () => (
             <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               La prise en charge ostéopathique des nourissons
             </h2>
-            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+            <div className="prose prose-lg mt-6 text-gray-500 space-y-6">
               <p>
                 L'accouchement est un moment important pour les structures
                 corporelles de votre bébé. Elles subissent de nombreuses
@@ -90,7 +90,7 @@ const BabiesSection = () => (
         </div>
 
         <div className="relative md:bg-white md:p-6">
-          <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+          <div className="prose prose-lg text-gray-500 lg:max-w-none">
             <ul role="list">
               <li>
                 <p>
