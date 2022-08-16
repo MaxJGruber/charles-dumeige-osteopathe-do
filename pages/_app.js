@@ -7,6 +7,7 @@ import Footer from "components/Footer";
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
       <DefaultSeo
         title={TITLE}
         description={META_DESCRIPTION}

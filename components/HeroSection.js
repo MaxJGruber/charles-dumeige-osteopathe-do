@@ -10,10 +10,10 @@ const navigation = [
   { name: "Contact & Informations", href: "/contact" },
 ];
 
-const HeroSection = () => (
+const HeroSection = ({ image, title, title2, introduction }) => (
   <div className="relative bg-white overflow-hidden">
     <div className="max-w-7xl mx-auto">
-      <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+      <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-48">
         <svg
           className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
           fill="currentColor"
@@ -33,11 +33,13 @@ const HeroSection = () => (
               <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div className="flex items-center justify-between h-full w-full md:w-auto">
                   <Link href="/" passhref>
-                    <img
-                      alt="Logo"
-                      className="h-8 w-auto sm:h-28"
-                      src="static/logo.jpg"
-                    />
+                    <a>
+                      <img
+                        alt="Logo"
+                        className="h-8 w-auto sm:h-28"
+                        src="static/logo.jpg"
+                      />
+                    </a>
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightblue">
@@ -49,12 +51,10 @@ const HeroSection = () => (
               </div>
               <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                 {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="font-medium text-gray-500 hover:text-gray-900"
-                  >
-                    {item.name}
+                  <Link key={item.name} href={item.href}>
+                    <a className="text-lg  text-gray-500 hover:text-gray-900">
+                      {item.name}
+                    </a>
                   </Link>
                 ))}
               </div>
@@ -110,18 +110,11 @@ const HeroSection = () => (
         <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
           <div className="sm:text-center lg:text-left">
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block xl:inline">
-                Bienvenue sur le site de votre ostéopathe...
-              </span>{" "}
-              <span className="block text-lightblue xl:inline">
-                Charles Dumeige
-              </span>
+              <span className="block xl:inline">{title}</span>{" "}
+              <span className="block text-lightblue xl:inline">{title2}</span>
             </h1>
             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-              Installé depuis 2019 à Meaux (Dept 77), Charles Dumeige,
-              ostéopathe D.O est à votre écoute et se charge de soulager vos
-              douleurs musculo-squelettiques.\n Il prend en charge ses patients
-              au cabinet ou à domicile.
+              {introduction}
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
@@ -147,8 +140,7 @@ const HeroSection = () => (
       <Fade direction="left" style={{ height: "100%" }}>
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="static/cover.png"
-          alt=""
+          src={image}
         />
       </Fade>
     </div>

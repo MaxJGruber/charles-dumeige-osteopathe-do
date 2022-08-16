@@ -8,7 +8,7 @@ const AdultSection = () => (
             <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-2xl">
               La prise en charge ostéopathique des adultes
             </h2>
-            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+            <div className="prose prose-lg mt-6 text-gray-500 space-y-6">
               <p>
                 L'adulte peut consulter en ostéopathie pour de nombreux motifs
                 autre que le mal de dos, même s' il reste très récurent. Dans la
@@ -84,7 +84,7 @@ const AdultSection = () => (
           </div>
         </div>
         <div className="relative md:bg-white md:p-6">
-          <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+          <div className="prose prose-lg text-gray-500 lg:max-w-none">
             <ul role="list">
               <li>
                 Le mal de dos à tous les niveaux rachidiens (cervicaux, dorsaux,
@@ -205,7 +205,7 @@ const AdultSection = () => (
             <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-xl">
               Le mal de dos
             </h2>
-            <div className="prose prose-indigo prose-xl mt-6 text-gray-500 space-y-6">
+            <div className="prose prose-lg mt-6 text-gray-500 space-y-6">
               <p>
                 Les origines du mal de dos ou encore d'autres motifs (lumbago,
                 torticolis et cervicalgies, sciatalgies...) peuvent s'expliquer
@@ -233,7 +233,7 @@ const AdultSection = () => (
           </div>
         </div>
         <div className="relative md:bg-white md:p-6">
-          <div className="prose prose-indigo prose-xl text-gray-500 lg:max-w-none">
+          <div className="prose prose-lg text-gray-500 lg:max-w-none">
             <p>
               Votre ostéopathe Charles Dumeige aide votre corps à retrouver son
               harmonie. Il est recommandé de consulter régulièrement pour
