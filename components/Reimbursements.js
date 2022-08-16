@@ -5,14 +5,14 @@ export default function Reimbursements() {
     <div className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 class="text-base text-lightblue font-semibold tracking-wide uppercase">
+          <h2 className="text-base text-lightblue font-semibold tracking-wide uppercase">
             Remboursements
           </h2>
-          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
             Les consultations ostéopathiques peuvent être prises en charge
             partiellement ou totalement selon les mutuelles
           </p>
-          <p class="mt-5 mb-5 max-w-2xl text-sm text-gray-500 lg:mx-auto">
+          <p className="mt-5 mb-5 max-w-2xl text-sm text-gray-500 lg:mx-auto">
             (mis à jour au 23/08/2019)
           </p>
           <button
