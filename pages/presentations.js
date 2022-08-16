@@ -7,7 +7,12 @@ import PersonalSection from "components/PersonalSection";
 
 const Presentations = () => (
   <>
-    <HeroSection />
+    <HeroSection
+      title="L'ostéopathie, l'ostéopathe..."
+      title2="Qu'est ce que c'est?"
+      introduction="Une technique apparue au XIXe siècle aux Etats- Unis, l'ostéopathie est une pratique exclusivement manuelle qui lève en particulier les blocages articulaires du corps pour lui permettre de mieux fonctionner."
+      image="static/presentations-hero-pic.jpeg"
+    />
     <Disclaimer />
     <Divider />
     <AboutJob />
