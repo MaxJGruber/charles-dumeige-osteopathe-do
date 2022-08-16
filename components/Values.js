@@ -1,5 +1,3 @@
-import { CheckIcon } from "@heroicons/react/solid";
-
 const tiers = [
   {
     name: "La structure gouverne la fonction",
@@ -50,7 +48,9 @@ const Values = () => (
                 {tier.name}
               </h2>
               {tier.description.map((line) => (
-                <p className="mt-4 text-md text-gray-500">{line}</p>
+                <p key={line} className="mt-4 text-md text-gray-500">
+                  {line}
+                </p>
               ))}
             </div>
           </div>
