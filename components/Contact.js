@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { Fade } from "react-awesome-reveal";
 import { CheckIcon } from "@heroicons/react/outline";
 
 const Map = dynamic(() => import("components/Map"), {
@@ -144,7 +145,9 @@ const Featured = () => (
             />
           </svg>
           <div className="relative mx-auto">
-            <Map coordinates={[48.93587430271724, 2.1631031634520994]} />
+            <Fade direction="right">
+              <Map coordinates={[48.93587430271724, 2.1631031634520994]} />
+            </Fade>
           </div>
         </div>
       </div>
@@ -257,7 +260,9 @@ const Featured = () => (
               />
             </svg>
             <div className="relative mx-auto">
-              <Map coordinates={[48.860504499146764, 2.2801899629124613]} />
+              <Fade direction="left">
+                <Map coordinates={[48.860504499146764, 2.2801899629124613]} />
+              </Fade>
             </div>
           </div>
         </div>

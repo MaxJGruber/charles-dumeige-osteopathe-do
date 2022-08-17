@@ -1,3 +1,5 @@
+import { Fade } from "react-awesome-reveal";
+
 const SportsSection = () => (
   <>
     <div className="relative bg-white py-16 sm:py-5">
@@ -42,12 +44,14 @@ const SportsSection = () => (
             </svg>
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
-            <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
-              <img
-                className="absolute inset-0 h-full w-full object-cover"
-                src="static/istock-images/sportsman_small.jpeg"
-              />
-            </div>
+            <Fade direction="left">
+              <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
+                <img
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="static/istock-images/sportsman_small.jpeg"
+                />
+              </div>
+            </Fade>
           </div>
         </div>
 

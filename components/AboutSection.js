@@ -1,3 +1,5 @@
+import { Zoom } from "react-awesome-reveal";
+
 const AboutSection = () => (
   <>
     <div className="relative bg-white py-16 sm:py-0">
@@ -42,15 +44,17 @@ const AboutSection = () => (
             </svg>
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:pt-20 lg:pb-12">
-            <div className="flex justify-center">
-              <div className="relative w-3/4 py-72 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
-                <img
-                  className="absolute inset-0 h-full w-full object-cover"
-                  src="static/profile-pic.jpg"
-                  alt=""
-                />
+            <Zoom direction="top">
+              <div className="flex justify-center">
+                <div className="relative w-3/4 py-72 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
+                  <img
+                    className="absolute inset-0 h-full w-full object-cover"
+                    src="static/profile-pic.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
-            </div>
+            </Zoom>
           </div>
         </div>
 
