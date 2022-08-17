@@ -16,16 +16,21 @@ const navigation = {
     { name: "L'ostéopathe", href: "#" },
   ],
   externalLinks: [
-    { name: "Doctolib (Sartrouville)", href: "#" },
-    { name: "Doctolib (Paris)", href: "#" },
-    { name: "Pages Jaunes", href: "#" },
-    { name: "Google", href: "#" },
+    {
+      name: "Doctolib (Sartrouville)",
+      href: "https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige",
+    },
+    {
+      name: "Doctolib (Paris)",
+      href: "https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige?pid=practice-318734",
+    },
+    { name: "Pages Jaunes", href: "https://www.pagesjaunes.fr/pros/59987222" },
   ],
   legal: [{ name: "À propos", href: "#" }],
   social: [
     {
       name: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/in/charles-dumeige-osteopathe/",
       icon: faLinkedin,
     },
   ],
