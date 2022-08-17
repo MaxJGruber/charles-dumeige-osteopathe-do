@@ -90,7 +90,7 @@ const Featured = () => (
                   </p>
                 </dt>
                 <div className="lg:mx-auto lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-5 lg:items-start">
-                  <dd className="mt-2 ml-9 text-base prose text-gray-500">
+                  <dd className="mt-5 ml-9 text-base prose text-gray-500">
                     <p className="font-bold">Moyens de transport:</p>
                     <ul role="list">
                       <li>RER - Sartrouville (ligne A)</li>
@@ -98,12 +98,19 @@ const Featured = () => (
                       <li>Bus - Turgot (lignes 25 et 5)</li>
                     </ul>
                   </dd>
-                  <dd className="mt-2 ml-9 text-base prose text-gray-500">
+                  <dd className="mt-5 text-base prose text-gray-500">
                     <p className="font-bold">Informations pratiques:</p>
                     <ul role="list">
                       <li>1er sous-sol avec ascenseur</li>
                       <li>Accès handicapé</li>
                       <li>Parking payant</li>
+                    </ul>
+                  </dd>
+                  <dd className="ml-9 text-base prose text-gray-500">
+                    <p className="font-bold">Horaires:</p>
+                    <ul role="list">
+                      <li>8H30 à 20H30 du Lundi au Samedi</li>
+                      <li>10H30 à 15H les Dimanches</li>
                     </ul>
                   </dd>
                 </div>
@@ -217,7 +224,7 @@ const Featured = () => (
                     </p>
                   </dt>
                   <div className="lg:mx-auto lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-5 lg:items-start">
-                    <dd className="mt-2 ml-9 text-base prose text-gray-500">
+                    <dd className="mt-5 ml-9 text-base prose text-gray-500">
                       <p className="font-bold">Moyens de transport:</p>
                       <ul role="list">
                         <li>
@@ -228,7 +235,7 @@ const Featured = () => (
                         <li>RER - Avenue Henri Martin (ligne C)</li>
                       </ul>
                     </dd>
-                    <dd className="mt-2 ml-9 text-base prose text-gray-500">
+                    <dd className="mt-5 text-base prose text-gray-500">
                       <p className="font-bold">Informations pratiques:</p>
                       <ul role="list">
                         <li>Rez-de-chaussée</li>
@@ -236,6 +243,12 @@ const Featured = () => (
                           Parking public: Passy Plaza 3 Rue Jean Bologne, 75016
                           Paris
                         </li>
+                      </ul>
+                    </dd>
+                    <dd className="ml-9 text-base prose text-gray-500">
+                      <p className="font-bold">Horaires:</p>
+                      <ul role="list">
+                        <li>8H30 à 20H30 du Lundi au Vendredi</li>
                       </ul>
                     </dd>
                   </div>
