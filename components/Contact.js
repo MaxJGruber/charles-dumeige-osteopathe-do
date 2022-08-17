@@ -19,8 +19,6 @@ const SARTROUVILLE_ADDRESS = [
   {
     id: 1,
     name: "20 Rue René Brûlay, 78500, Sartrouville",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
     googleMapsLink: "https://goo.gl/maps/4mhDD2yna4iP3xru9",
   },
 ];
@@ -87,13 +85,28 @@ const Featured = () => (
               <div key={item.id} className="relative">
                 <dt>
                   <CheckIcon className="absolute h-6 w-6 text-green-500" />
-                  <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
+                  <p className="ml-9 text-xl leading-6 font-medium text-gray-900">
                     {item.name}
                   </p>
                 </dt>
-                <dd className="mt-2 ml-9 text-base text-gray-500">
-                  {item.description}
-                </dd>
+                <div className="lg:mx-auto lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-5 lg:items-start">
+                  <dd className="mt-2 ml-9 text-base prose text-gray-500">
+                    <p className="font-bold">Moyens de transport:</p>
+                    <ul role="list">
+                      <li>RER - Sartrouville (ligne A)</li>
+                      <li>Bus - Convention (ligne 5)</li>
+                      <li>Bus - Turgot (lignes 25 et 5)</li>
+                    </ul>
+                  </dd>
+                  <dd className="mt-2 ml-9 text-base prose text-gray-500">
+                    <p className="font-bold">Informations pratiques:</p>
+                    <ul role="list">
+                      <li>1er sous-sol avec ascenseur</li>
+                      <li>Accès handicapé</li>
+                      <li>Parking payant</li>
+                    </ul>
+                  </dd>
+                </div>
                 <a href={item.googleMapsLink}>
                   <button
                     type="button"
@@ -142,7 +155,9 @@ const Featured = () => (
           </svg>
           <div className="relative mx-auto">
             <Fade direction="right">
-              <Map coordinates={[48.93587430271724, 2.1631031634520994]} />
+              <div className="relative rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
+                <Map coordinates={[48.93587430271724, 2.1631031634520994]} />
+              </div>
             </Fade>
           </div>
         </div>
@@ -197,13 +212,33 @@ const Featured = () => (
                 <div key={item.id} className="relative">
                   <dt>
                     <CheckIcon className="absolute h-6 w-6 text-green-500" />
-                    <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
+                    <p className="ml-9 text-xl leading-6 font-medium text-gray-900">
                       {item.name}
                     </p>
                   </dt>
-                  <dd className="mt-2 ml-9 text-base text-gray-500">
-                    {item.description}
-                  </dd>
+                  <div className="lg:mx-auto lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-5 lg:items-start">
+                    <dd className="mt-2 ml-9 text-base prose text-gray-500">
+                      <p className="font-bold">Moyens de transport:</p>
+                      <ul role="list">
+                        <li>
+                          Métro - Rue de la Pompe (Avenue Georges Mandel) (ligne
+                          9)
+                        </li>
+                        <li>RER - Boulainvilliers (ligne C)</li>
+                        <li>RER - Avenue Henri Martin (ligne C)</li>
+                      </ul>
+                    </dd>
+                    <dd className="mt-2 ml-9 text-base prose text-gray-500">
+                      <p className="font-bold">Informations pratiques:</p>
+                      <ul role="list">
+                        <li>Rez-de-chaussée</li>
+                        <li>
+                          Parking public: Passy Plaza 3 Rue Jean Bologne, 75016
+                          Paris
+                        </li>
+                      </ul>
+                    </dd>
+                  </div>
                   <a href={item.googleMapsLink}>
                     <button
                       type="button"
@@ -252,7 +287,9 @@ const Featured = () => (
             </svg>
             <div className="relative mx-auto">
               <Fade direction="left">
-                <Map coordinates={[48.860504499146764, 2.2801899629124613]} />
+                <div className="relative rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
+                  <Map coordinates={[48.860504499146764, 2.2801899629124613]} />
+                </div>
               </Fade>
             </div>
           </div>
