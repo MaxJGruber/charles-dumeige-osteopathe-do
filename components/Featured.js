@@ -24,7 +24,7 @@ const features = [
     id: 3,
     name: "Résultats rapides",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Il faut en moyenne 2 à 3 jours de récupération après une séance pour voir les douleurs s'atténuer complétement.",
     icon: LightningBoltIcon,
   },
   {
