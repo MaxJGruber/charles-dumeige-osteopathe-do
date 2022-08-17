@@ -26,7 +26,7 @@ const navigation = {
     },
     { name: "Pages Jaunes", href: "https://www.pagesjaunes.fr/pros/59987222" },
   ],
-  legal: [{ name: "À propos", href: "#" }],
+  other: [{ name: "Mentions légales", href: "/legal" }],
   social: [
     {
       name: "LinkedIn",
@@ -97,10 +97,10 @@ const Footer = () => (
             </div>
             <div className="mt-12 md:mt-0">
               <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Infos Légales
+                Autres
               </h3>
               <ul role="list" className="mt-4 space-y-4">
-                {navigation.legal.map((item) => (
+                {navigation.other.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
