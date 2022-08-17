@@ -16,6 +16,7 @@ const Index = () => (
         douleurs musculo-squelettiques. Il prend en charge ses patients
         au cabinet à Sartrouville ou à Paris."
       image="static/cover.png"
+      isHomePage
     />
     <Featured />
     <div className="py-12 bg-white">

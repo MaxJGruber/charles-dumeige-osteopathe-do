@@ -7,10 +7,16 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 const navigation = [
   { name: "Présentations", href: "/presentations" },
   { name: "Patients", href: "/patients" },
-  { name: "Contact & Informations", href: "/contact" },
+  { name: "Contact & Informations", href: "#contact", isContact: true },
 ];
 
-const HeroSection = ({ image, title, title2, introduction }) => (
+const HeroSection = ({
+  image,
+  title,
+  title2,
+  introduction,
+  isHomePage = false,
+}) => (
   <div className="relative bg-white overflow-hidden">
     <div className="max-w-7xl mx-auto">
       <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-48">
@@ -51,7 +57,16 @@ const HeroSection = ({ image, title, title2, introduction }) => (
               </div>
               <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                 {navigation.map((item) => (
-                  <Link key={item.name} href={item.href}>
+                  <Link
+                    key={item.name}
+                    href={
+                      isHomePage
+                        ? item.href
+                        : !item.isContact
+                        ? item.href
+                        : "/#contact"
+                    }
+                  >
                     <a className="text-lg  text-gray-500 hover:text-gray-900">
                       {item.name}
                     </a>
@@ -118,14 +133,14 @@ const HeroSection = ({ image, title, title2, introduction }) => (
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
-                <Link href="#">
+                <Link href="#contact">
                   <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-lightblue hover:bg-darkblue  md:py-4 md:text-lg md:px-10">
                     Prendre Contact
                   </a>
                 </Link>
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
-                <Link href="#">
+                <Link href="/presentations">
                   <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-lightblue bg-lightblueHover hover:bg-darkblueHover hover:text-white md:py-4 md:text-lg md:px-10">
                     En Savoir Plus
                   </a>
