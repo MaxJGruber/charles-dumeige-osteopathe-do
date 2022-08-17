@@ -25,17 +25,13 @@ const HeroSection = ({
           fill="currentColor"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
-          aria-hidden="true"
         >
           <polygon points="50,0 100,0 50,100 0,100" />
         </svg>
 
         <Popover>
           <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
-            <nav
-              className="relative flex items-center justify-between sm:h-10 lg:justify-start"
-              aria-label="Global"
-            >
+            <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
               <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div className="flex items-center justify-between h-full w-full md:w-auto">
                   <Link href="/" passhref>
@@ -49,8 +45,7 @@ const HeroSection = ({
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightblue">
-                      <span className="sr-only">Open main menu</span>
-                      <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                      <MenuIcon className="h-6 w-6" />
                     </Popover.Button>
                   </div>
                 </div>
@@ -100,8 +95,7 @@ const HeroSection = ({
                   </Link>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightblue">
-                      <span className="sr-only">Close main menu</span>
-                      <XIcon className="h-6 w-6" aria-hidden="true" />
+                      <XIcon className="h-6 w-6" />
                     </Popover.Button>
                   </div>
                 </div>

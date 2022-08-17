@@ -32,10 +32,7 @@ const navigation = {
 };
 
 const Footer = () => (
-  <footer className="bg-white" aria-labelledby="footer-heading">
-    <h2 id="footer-heading" className="sr-only">
-      Footer
-    </h2>
+  <footer className="bg-white">
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
         <div className="grid grid-cols-2 gap-8 xl:col-span-2">

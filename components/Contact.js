@@ -34,7 +34,6 @@ const Featured = () => (
         height={784}
         fill="none"
         viewBox="0 0 404 784"
-        aria-hidden="true"
       >
         <defs>
           <pattern
@@ -87,10 +86,7 @@ const Featured = () => (
             {SARTROUVILLE_ADDRESS.map((item) => (
               <div key={item.id} className="relative">
                 <dt>
-                  <CheckIcon
-                    className="absolute h-6 w-6 text-green-500"
-                    aria-hidden="true"
-                  />
+                  <CheckIcon className="absolute h-6 w-6 text-green-500" />
                   <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
                     {item.name}
                   </p>
@@ -111,7 +107,7 @@ const Featured = () => (
           </dl>
         </div>
 
-        <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
+        <div className="mt-10 -mx-4 relative lg:mt-0">
           <svg
             className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
             width={784}
@@ -158,7 +154,6 @@ const Featured = () => (
         height={784}
         fill="none"
         viewBox="0 0 404 784"
-        aria-hidden="true"
       >
         <defs>
           <pattern
@@ -201,10 +196,7 @@ const Featured = () => (
               {PARIS_ADDRESS.map((item) => (
                 <div key={item.id} className="relative">
                   <dt>
-                    <CheckIcon
-                      className="absolute h-6 w-6 text-green-500"
-                      aria-hidden="true"
-                    />
+                    <CheckIcon className="absolute h-6 w-6 text-green-500" />
                     <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
                       {item.name}
                     </p>
@@ -232,7 +224,6 @@ const Featured = () => (
               height={404}
               fill="none"
               viewBox="0 0 784 404"
-              aria-hidden="true"
             >
               <defs>
                 <pattern
