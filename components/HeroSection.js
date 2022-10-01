@@ -7,16 +7,10 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 const navigation = [
   { name: "Présentations", href: "/presentations" },
   { name: "Patients", href: "/patients" },
-  { name: "Contact & Informations", href: "#contact", isContact: true },
+  { name: "Contact & Informations", href: "/#contact" },
 ];
 
-const HeroSection = ({
-  image,
-  title,
-  title2,
-  introduction,
-  isHomePage = false,
-}) => (
+const HeroSection = ({ image, title, title2, introduction, secondButton }) => (
   <div className="relative bg-white overflow-hidden">
     <div className="max-w-7xl mx-auto">
       <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-48">
@@ -52,16 +46,7 @@ const HeroSection = ({
               </div>
               <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                 {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={
-                      isHomePage
-                        ? item.href
-                        : !item.isContact
-                        ? item.href
-                        : "/#contact"
-                    }
-                  >
+                  <Link key={item.name} href={item.href}>
                     <a className="text-lg  text-gray-500 hover:text-gray-900">
                       {item.name}
                     </a>
@@ -103,13 +88,7 @@ const HeroSection = ({
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
-                      href={
-                        isHomePage
-                          ? item.href
-                          : !item.isContact
-                          ? item.href
-                          : "/#contact"
-                      }
+                      href={item.href}
                       passHref
                       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                     >
@@ -133,16 +112,16 @@ const HeroSection = ({
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
-                <Link href="#contact">
+                <Link href="https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige">
                   <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-lightblue hover:bg-darkblue  md:py-4 md:text-lg md:px-10">
-                    Prendre Contact
+                    Prendre Rendez-vous
                   </a>
                 </Link>
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
-                <Link href="/presentations">
+                <Link href={secondButton.href}>
                   <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-lightblue bg-lightblueHover hover:bg-darkblueHover hover:text-white md:py-4 md:text-lg md:px-10">
-                    En Savoir Plus
+                    {secondButton.label}
                   </a>
                 </Link>
               </div>

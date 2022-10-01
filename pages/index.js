@@ -15,11 +15,11 @@ const Index = () => (
         ostéopathe D.O est à votre écoute et se charge de soulager vos
         douleurs musculo-squelettiques."
       image="static/cover.png"
-      isHomePage
+      secondButton={{ label: "En Savoir Plus", href: "/presentations" }}
     />
     <Featured />
-    <Hook />
     <Contact />
+    <Hook />
     <PriceList />
     <Reimbursements />
     <PracticalInfo />
