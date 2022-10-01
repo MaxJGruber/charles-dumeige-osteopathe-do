@@ -2,7 +2,7 @@ import { Zoom } from "react-awesome-reveal";
 
 const AboutSection = () => (
   <>
-    <div className="relative bg-white py-16 sm:py-0">
+    <div className="relative bg-white py-16 sm:py-0" id="osteopathe">
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
         <div className="relative sm:py-16 lg:py-0">
           <div className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
@@ -135,8 +135,27 @@ const AboutSection = () => (
               engendrer.
             </p>
             <p>
-              En Novembre 2019, il s'installe en cabinet de kiné-ostéo dans la
-              ville de Meaux (77).
+              En Novembre 2019, il s'installe en cabinet de Kiné-Ostéo dans la
+              ville de Meaux (77) où il y travaillera pendant un peu plus de 2
+              ans.
+            </p>
+            <p>
+              En Novembre 2019, il s'installe en cabinet de Kiné-Ostéo dans la
+              ville de Meaux (77) où il y travaillera pendant un peu plus de 2
+              ans.
+            </p>
+            <p>
+              En Janvier 2022, il travaille 4 mois en tant qu'ostéopathe en
+              entreprise chez Posturite France, basée à Maisons-Lafitte,
+              spécialisée dans l'ergonomie au travail. Il y apporte ses conseils
+              pour la mise en place de matériel ergonomique dans les entreprises
+              et permettre une meilleure installation et utilisation des postes
+              de travail dans les bureaux et en télétravail.
+            </p>
+            <p>
+              Depuis Juin 2022, Charles Dumeige est installé en pôle médical au
+              sein de Sartrouville (78) et en Septembre de cette même année, en
+              cabinet de bien-être à Paris 16.
             </p>
           </div>
         </div>

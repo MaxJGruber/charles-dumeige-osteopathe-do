@@ -16,6 +16,10 @@ const features = [
     description:
       "Consultation d'ostéopathie Nourrisson et enfant (moins de 12 ans) (Paris)",
   },
+  {
+    price: "80€",
+    description: "Consultation d'ostéopathie à domicile (à prévoir par contact téléphonique uniquement)",
+  },
 ];
 
 const PriceList = () => (
@@ -34,9 +38,6 @@ const PriceList = () => (
                 <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-lightblue text-white">
                   {feature.price}
                 </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  {feature.name}
-                </p>
               </dt>
               <dd className="mt-2 ml-16 text-base text-gray-500">
                 {feature.description}

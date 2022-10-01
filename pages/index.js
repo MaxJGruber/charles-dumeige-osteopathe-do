@@ -11,19 +11,13 @@ const Index = () => (
     <HeroSection
       title="Bienvenue sur le site de votre ostéopathe..."
       title2="Charles Dumeige"
-      introduction="Installé depuis 2021 à Sartrouville (Dept 78), Charles Dumeige,
+      introduction="Installé depuis 2022 à Sartrouville (Dept 78) et Paris (75016), Charles Dumeige,
         ostéopathe D.O est à votre écoute et se charge de soulager vos
-        douleurs musculo-squelettiques. Il prend en charge ses patients
-        au cabinet à Sartrouville ou à Paris."
+        douleurs musculo-squelettiques."
       image="static/cover.png"
       isHomePage
     />
     <Featured />
-    <div className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="elfsight-app-031e24ce-32e0-4a8b-9699-4264ab6d6b01"></div>
-      </div>
-    </div>
     <Hook />
     <Contact />
     <PriceList />

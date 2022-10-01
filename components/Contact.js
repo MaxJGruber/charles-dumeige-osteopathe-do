@@ -10,8 +10,6 @@ const PARIS_ADDRESS = [
   {
     id: 1,
     name: "49 Rue de la Tour, 75116, Paris",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
     googleMapsLink: "https://goo.gl/maps/ziF1d5N5TbuS1VA59",
   },
 ];
@@ -68,16 +66,21 @@ const Featured = () => (
         </p>
       </div>
 
-      <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+      <div
+        className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
+        id="sartrouville"
+      >
         <div className="relative">
           <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
             À Sartrouville...
           </h3>
           <p className="mt-3 text-lg text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            minima sequi recusandae, porro maiores officia assumenda aliquam
-            laborum ab aliquid veritatis impedit odit adipisci optio iste
-            blanditiis facere. Totam, velit.
+            Le centre médical Debussy est situé à 5 min à pied de la gare, sur
+            la place du marché. Le pôle médical est flambant neuf et comporte 4
+            médecins, une sage femme, 2 infirmières et une hypnothérapeute.
+            Votre ostéopathe Charles Dumeige, vous y accueille le mercredi, le
+            jeudi, 2 samedis par mois et tous les dimanches pour les demandes
+            d'urgences.
           </p>
 
           <dl className="mt-10 space-y-10">
@@ -202,17 +205,23 @@ const Featured = () => (
           fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
         />
       </svg>
-
-      <div className="relative mt-12 sm:mt-16 lg:mt-24">
+      <div className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="elfsight-app-031e24ce-32e0-4a8b-9699-4264ab6d6b01"></div>
+        </div>
+      </div>
+      <div className="relative mt-12 sm:mt-16 lg:mt-24" id="paris">
         <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div className="lg:col-start-2">
             <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
               ...et à Paris!
             </h3>
             <p className="mt-3 text-lg text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-              ex obcaecati natus eligendi delectus, cum deleniti sunt in labore
-              nihil quod quibusdam expedita nemo.
+              Le cabinet Green est situé dans le quartier Passy dans le 16ème, à
+              deux pas de la Tour Eiffel. Il comporte des thérapeutes
+              paramédicaux et de médecines douces. Votre ostéopathe Charles
+              Dumeige, vous y accueille du lundi au vendredi sur un large choix
+              d'horaire avec possibilité d'avoir un rendez-vous dans les 2h !
             </p>
             <dl className="mt-10 space-y-10">
               {PARIS_ADDRESS.map((item) => (

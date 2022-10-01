@@ -30,7 +30,7 @@ const tiers = [
 ];
 
 const Values = () => (
-  <div className="bg-white">
+  <div className="bg-white" id="valeur">
     <div className="max-w-7xl mx-auto pb-24 px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:flex-col sm:align-center">
         <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-xl sm:text-center">

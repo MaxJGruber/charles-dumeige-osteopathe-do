@@ -2,7 +2,7 @@ import { Fade } from "react-awesome-reveal";
 
 const AdultSection = () => (
   <>
-    <div className="relative bg-white">
+    <div className="relative bg-white" id="adultes">
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
