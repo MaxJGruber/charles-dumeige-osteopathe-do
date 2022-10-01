@@ -8,13 +8,14 @@ export const META_DESCRIPTION =
 
 // The URL of the deployed page (used in meta tags for SMO)
 // Example: https://www.domain.com/
-export const URL = null;
+export const URL = "https://charles-dumeige-osteopathe.fr/";
 
 // The preview image shown in social networks and when sharing on messengers,
 // like WhatsApp and others
 // The URL should be absolute, e.g.: https//www.domain.com/static/preview.jpg
 // Recommended size: 1200 x 627
-export const META_IMAGE = null;
+export const META_IMAGE =
+  "https://charles-dumeige-osteopathe.fr/static/preview.png";
 
 // The Google Analytics tracking ID
 export const GA_TRACKING_ID = "";
