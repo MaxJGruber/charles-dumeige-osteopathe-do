@@ -140,11 +140,6 @@ const AboutSection = () => (
               ans.
             </p>
             <p>
-              En Novembre 2019, il s'installe en cabinet de Kiné-Ostéo dans la
-              ville de Meaux (77) où il y travaillera pendant un peu plus de 2
-              ans.
-            </p>
-            <p>
               En Janvier 2022, il travaille 4 mois en tant qu'ostéopathe en
               entreprise chez Posturite France, basée à Maisons-Lafitte,
               spécialisée dans l'ergonomie au travail. Il y apporte ses conseils
