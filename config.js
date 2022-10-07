@@ -18,4 +18,4 @@ export const META_IMAGE =
   "https://charles-dumeige-osteopathe.fr/static/preview.png";
 
 // The Google Analytics tracking ID
-export const GA_TRACKING_ID = "";
+export const GA_TRACKING_ID = "G-RP4YW4NXQN";
