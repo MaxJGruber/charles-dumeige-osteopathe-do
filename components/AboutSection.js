@@ -149,8 +149,7 @@ const AboutSection = () => (
             </p>
             <p>
               Depuis Juin 2022, Charles Dumeige est installé en pôle médical au
-              sein de Sartrouville (78) et en Septembre de cette même année, en
-              cabinet de bien-être à Paris 16.
+              sein de Sartrouville (78).
             </p>
           </div>
         </div>

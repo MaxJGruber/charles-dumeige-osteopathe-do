@@ -6,13 +6,6 @@ const Map = dynamic(() => import("components/Map"), {
   ssr: false,
 });
 
-const PARIS_ADDRESS = [
-  {
-    id: 1,
-    name: "49 Rue de la Tour, 75116, Paris",
-    googleMapsLink: "https://goo.gl/maps/ziF1d5N5TbuS1VA59",
-  },
-];
 const SARTROUVILLE_ADDRESS = [
   {
     id: 1,
@@ -62,17 +55,16 @@ const Featured = () => (
           Horaires et accès
         </h2>
         <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
-          Charles Dumeige prend en charge ses patients dans 2 cabinets.
+          Charles Dumeige exerce dans un tout nouveau cabinet.
         </p>
       </div>
-
       <div
         className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
         id="sartrouville"
       >
         <div className="relative">
           <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-            À Sartrouville...
+            À Sartrouville
           </h3>
           <p className="mt-3 text-lg text-gray-500">
             Le centre médical Debussy est situé à 5 min à pied de la gare, sur
@@ -109,11 +101,15 @@ const Featured = () => (
                       <li>Parking payant</li>
                     </ul>
                   </dd>
-                  <dd className="ml-9 text-base prose text-gray-500">
+                  <dd className="ml-9 text-base prose text-gray-500 col-span-2">
                     <p className="font-bold">Horaires:</p>
                     <ul role="list">
-                      <li>8H30 à 20H30 du Lundi au Samedi</li>
-                      <li>10H30 à 15H les Dimanches</li>
+                      <li><strong>LUNDI:</strong> 8H30 à 12H30</li>
+                      <li><strong>MARDI:</strong> De 14H30 à 16H et 18H30 à 20H45</li>
+                      <li><strong>MERCREDI/JEUDI:</strong> 8H30 à 20H30</li>
+                      <li><strong>VENDREDI:</strong> 14H30 à 20H30</li>
+                      <li><strong>SAMEDI (DEUX SAMEDI PAR MOIS):</strong> 9H30 à 15H30</li>
+                      <li><strong>DIMANCHE:</strong> 10H30 à 16H30</li>
                     </ul>
                   </dd>
                 </div>
@@ -209,118 +205,6 @@ const Featured = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="elfsight-app-031e24ce-32e0-4a8b-9699-4264ab6d6b01"></div>
         </div>
-      </div>
-      <div className="relative mt-12 sm:mt-16 lg:mt-24" id="paris">
-        <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
-          <div className="lg:col-start-2">
-            <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-              ...et à Paris!
-            </h3>
-            <p className="mt-3 text-lg text-gray-500">
-              Le cabinet Green est situé dans le quartier Passy dans le 16ème, à
-              deux pas de la Tour Eiffel. Il comporte des thérapeutes
-              paramédicaux et de médecines douces. Votre ostéopathe Charles
-              Dumeige, vous y accueille du lundi au vendredi sur un large choix
-              d'horaire avec possibilité d'avoir un rendez-vous dans les 2h !
-            </p>
-            <dl className="mt-10 space-y-10">
-              {PARIS_ADDRESS.map((item) => (
-                <div key={item.id} className="relative">
-                  <dt>
-                    <CheckIcon className="absolute h-6 w-6 text-green-500" />
-                    <p className="ml-9 text-xl leading-6 font-medium text-gray-900">
-                      {item.name}
-                    </p>
-                  </dt>
-                  <div className="lg:mx-auto lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-5 lg:items-start">
-                    <dd className="mt-5 ml-9 text-base prose text-gray-500">
-                      <p className="font-bold">Moyens de transport:</p>
-                      <ul role="list">
-                        <li>
-                          Métro - Rue de la Pompe (Avenue Georges Mandel) (ligne
-                          9)
-                        </li>
-                        <li>RER - Boulainvilliers (ligne C)</li>
-                        <li>RER - Avenue Henri Martin (ligne C)</li>
-                      </ul>
-                    </dd>
-                    <dd className="mt-5 text-base prose text-gray-500">
-                      <p className="font-bold">Informations pratiques:</p>
-                      <ul role="list">
-                        <li>Rez-de-chaussée</li>
-                        <li>
-                          Parking public: Passy Plaza 3 Rue Jean Bologne, 75016
-                          Paris
-                        </li>
-                      </ul>
-                    </dd>
-                    <dd className="ml-9 text-base prose text-gray-500">
-                      <p className="font-bold">Horaires:</p>
-                      <ul role="list">
-                        <li>8H30 à 20H30 du Lundi au Vendredi</li>
-                      </ul>
-                    </dd>
-                  </div>
-                  <a href={item.googleMapsLink}>
-                    <button
-                      type="button"
-                      className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
-                    >
-                      Plannifiez votre itinéraire
-                    </button>
-                  </a>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
-            <svg
-              className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-              width={784}
-              height={404}
-              fill="none"
-              viewBox="0 0 784 404"
-            >
-              <defs>
-                <pattern
-                  id="e80155a9-dfde-425a-b5ea-1f6fadd20131"
-                  x={0}
-                  y={0}
-                  width={20}
-                  height={20}
-                  patternUnits="userSpaceOnUse"
-                >
-                  <rect
-                    x={0}
-                    y={0}
-                    width={4}
-                    height={4}
-                    className="text-gray-200"
-                    fill="currentColor"
-                  />
-                </pattern>
-              </defs>
-              <rect
-                width={784}
-                height={404}
-                fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
-              />
-            </svg>
-            <div className="relative mx-auto">
-              <Fade direction="left">
-                <div className="relative rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
-                  <Map coordinates={[48.860504499146764, 2.2801899629124613]} />
-                </div>
-              </Fade>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="elfsight-app-4b2215bb-236a-4040-9f4f-69493cbe470a"></div>
       </div>
     </div>
   </div>

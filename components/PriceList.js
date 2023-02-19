@@ -1,24 +1,16 @@
 const features = [
   {
     price: "60€",
-    description: "Consultation générale d'ostéopathie (Sartrouville)",
+    description: "Consultation générale d'ostéopathie",
   },
   {
     price: "75€",
-    description: "Consultation d'ostéopathie le dimanche (Sartrouville)",
-  },
-  {
-    price: "70€",
-    description: "Consultation générale d'ostéopathie (Paris)",
-  },
-  {
-    price: "60€",
-    description:
-      "Consultation d'ostéopathie Nourrisson et enfant (moins de 12 ans) (Paris)",
+    description: "Consultation d'ostéopathie le dimanche",
   },
   {
     price: "80€",
-    description: "Consultation d'ostéopathie à domicile (à prévoir par contact téléphonique uniquement)",
+    description:
+      "Consultation d'ostéopathie à domicile (à prévoir par contact téléphonique uniquement)",
   },
 ];
 

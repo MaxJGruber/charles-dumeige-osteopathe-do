@@ -9,7 +9,7 @@ const navigation = {
     { name: "Femmes enceintes", href: "enceintes" },
     { name: "Adultes", href: "adultes" },
     { name: "Séniors", href: "seniors" },
-    { name: "Sportifs", href: "#sportifs" },
+    { name: "Sportifs", href: "sportifs" },
   ],
   presentation: [
     { name: "L'ostéopathie", href: "osteopathie" },
@@ -21,19 +21,11 @@ const navigation = {
       name: "Sartrouville",
       href: "/#sartrouville",
     },
-    {
-      name: "Paris",
-      href: "/#paris",
-    },
   ],
   externalLinks: [
     {
-      name: "Doctolib (Sartrouville)",
+      name: "Doctolib",
       href: "https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige",
-    },
-    {
-      name: "Doctolib (Paris)",
-      href: "https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige?pid=practice-318734",
     },
   ],
   other: [{ name: "Mentions légales", href: "/legal" }],

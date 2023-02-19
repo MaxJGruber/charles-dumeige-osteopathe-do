@@ -29,13 +29,11 @@ const HeroSection = ({ image, title, title2, introduction, secondButton }) => (
               <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div className="flex items-center justify-between h-full w-full md:w-auto">
                   <Link href="/" passhref>
-                    <a>
-                      <img
-                        alt="Logo"
-                        className="h-8 w-auto sm:h-28"
-                        src="static/logo.jpg"
-                      />
-                    </a>
+                    <img
+                      alt="Logo"
+                      className="h-8 w-auto sm:h-28"
+                      src="static/logo.jpg"
+                    />
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightblue">
@@ -46,10 +44,12 @@ const HeroSection = ({ image, title, title2, introduction, secondButton }) => (
               </div>
               <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                 {navigation.map((item) => (
-                  <Link key={item.name} href={item.href}>
-                    <a className="text-lg  text-gray-500 hover:text-gray-900">
-                      {item.name}
-                    </a>
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-lg  text-gray-500 hover:text-gray-900"
+                  >
+                    {item.name}
                   </Link>
                 ))}
               </div>
@@ -89,7 +89,6 @@ const HeroSection = ({ image, title, title2, introduction, secondButton }) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      passHref
                       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
@@ -112,17 +111,19 @@ const HeroSection = ({ image, title, title2, introduction, secondButton }) => (
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
-                <Link href="https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige">
-                  <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-lightblue hover:bg-darkblue  md:py-4 md:text-lg md:px-10">
-                    Prendre Rendez-vous
-                  </a>
+                <Link
+                  href="https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige"
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-lightblue hover:bg-darkblue  md:py-4 md:text-lg md:px-10"
+                >
+                  Prendre Rendez-vous
                 </Link>
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
-                <Link href={secondButton.href}>
-                  <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-lightblue bg-lightblueHover hover:bg-darkblueHover hover:text-white md:py-4 md:text-lg md:px-10">
-                    {secondButton.label}
-                  </a>
+                <Link
+                  href={secondButton.href}
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-lightblue bg-lightblueHover hover:bg-darkblueHover hover:text-white md:py-4 md:text-lg md:px-10"
+                >
+                  {secondButton.label}
                 </Link>
               </div>
             </div>

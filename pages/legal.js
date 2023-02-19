@@ -56,10 +56,8 @@ const Legal = () => (
           GoDaddy.
         </p>
         <div className="mt-6 ">
-          <Link href="/">
-            <a className="text-xl text-gray-300 hover:text-lightblue">
-              Retour à la page d'acceuil<span> &rarr;</span>
-            </a>
+          <Link href="/" className="text-xl text-gray-300 hover:text-lightblue">
+            Retour à la page d'acceuil<span> &rarr;</span>
           </Link>
         </div>
       </div>
