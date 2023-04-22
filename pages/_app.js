@@ -30,16 +30,17 @@ function MyApp({ Component, pageProps }) {
       Router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, []);
-  
+
   return (
     <>
       <script src="https://apps.elfsight.com/p/platform.js" defer></script>
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <Script
         strategy="lazyOnload"
+        id="gtm-url"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
       ></Script>
-      <Script strategy="lazyOnload">{`
+      <Script strategy="lazyOnload" id="gtm-script">{`
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
