@@ -11,8 +11,8 @@ class MyDocument extends Document {
           <meta name="googlebot" content="index,follow" />
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
           <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-RP4YW4NXQN"
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           ></script>
           <script
             dangerouslySetInnerHTML={{
