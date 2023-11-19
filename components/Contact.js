@@ -104,12 +104,12 @@ const Featured = () => (
                   <dd className="ml-9 text-base prose text-gray-500 col-span-2">
                     <p className="font-bold">Horaires:</p>
                     <ul role="list">
-                      <li><strong>LUNDI:</strong> 8H30 à 12H30</li>
-                      <li><strong>MARDI:</strong> De 14H30 à 16H et 18H30 à 20H45</li>
-                      <li><strong>MERCREDI/JEUDI:</strong> 8H30 à 20H30</li>
-                      <li><strong>VENDREDI:</strong> 14H30 à 20H30</li>
-                      <li><strong>SAMEDI (DEUX SAMEDI PAR MOIS):</strong> 9H30 à 15H30</li>
-                      <li><strong>DIMANCHE:</strong> 10H30 à 16H30</li>
+                      <li>
+                        <strong>LUNDI au SAMEDI:</strong> 8H30 à 20H30
+                      </li>
+                      <li>
+                        <strong>DIMANCHE:</strong> 10H30 à 15H45
+                      </li>
                     </ul>
                   </dd>
                 </div>
