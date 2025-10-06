@@ -33,7 +33,17 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <Script src="https://apps.elfsight.com/p/platform.js" defer></Script>
+      <Script
+        id="partoo-messaging-widget"
+        type="module"
+        src="https://cdn.partoo.co/widget/prod/latest.js"
+        data-token="a1c85f65-dfef-4160-b601-51456b0eecef"
+        data-icon="message_logo_icon"
+        data-color="#39BFD6"
+        data-policy-url="https://app.partoo.co/privacy/messaging/cf575e9a-27ab-4581-b61c-321e22ed0b1c?lang=fr"
+        data-country="FR"
+      ></Script>
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <Script
         strategy="lazyOnload"
