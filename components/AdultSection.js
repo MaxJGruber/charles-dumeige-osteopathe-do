@@ -67,7 +67,7 @@ const AdultSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/istock-images/adultspine_small.jpeg"
-                  alt=""
+                  alt="Ostéopathe manipulant la colonne vertébrale d'un adulte"
                 />
               </div>
             </Fade>
@@ -193,7 +193,7 @@ const AdultSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/istock-images/adultman_small.jpeg"
-                  alt=""
+                  alt="Homme adulte souffrant de douleurs de dos"
                 />
               </div>
             </Fade>

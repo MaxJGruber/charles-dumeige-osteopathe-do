@@ -1,3 +1,5 @@
+import { NextSeo } from "next-seo";
+import { URL } from "root/config";
 import HeroSection from "components/HeroSection";
 import Featured from "components/Featured";
 import Hook from "components/Hook";
@@ -8,6 +10,11 @@ import PracticalInfo from "components/PracticalInfo";
 
 const Index = () => (
   <>
+    <NextSeo
+      title="Ostéopathe à Sartrouville (78) | Charles Dumeige D.O"
+      description="Charles Dumeige, ostéopathe D.O à Sartrouville (78). Consultations au cabinet ou à domicile, 7j/7. Prise de rendez-vous en ligne."
+      canonical={URL}
+    />
     <HeroSection
       title="Bienvenue sur le site de votre ostéopathe..."
       title2="Charles Dumeige"
@@ -15,6 +22,7 @@ const Index = () => (
         ostéopathe D.O est à votre écoute et se charge de soulager vos
         douleurs musculo-squelettiques."
       image="static/cover.png"
+      imageAlt="Charles Dumeige, ostéopathe D.O à Sartrouville"
       secondButton={{ label: "En Savoir Plus", href: "/presentations" }}
     />
     <Featured />

@@ -46,7 +46,7 @@ const PregnantSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/istock-images/pregnant_small.jpeg"
-                  alt=""
+                  alt="Femme enceinte lors d'une consultation d'ostéopathie"
                 />
               </div>
             </Fade>

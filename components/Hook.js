@@ -13,7 +13,7 @@ const Hook = () => (
         <div className="inline-flex rounded-md shadow">
           <Fade cascade direction="top">
             <a
-              href="https://www.doctolib.fr/osteopathe/meaux/charles-dumeige"
+              href="https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-lightblue hover:bg-darkblue"

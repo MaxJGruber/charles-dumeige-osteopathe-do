@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { NextSeo } from "next-seo";
+import { URL } from "root/config";
 import {
   CameraIcon,
   BookOpenIcon,
@@ -36,11 +38,18 @@ const supportLinks = [
 
 const Legal = () => (
   <div className="bg-white">
+    <NextSeo
+      title="Mentions légales"
+      description="Mentions légales du site de Charles Dumeige, ostéopathe D.O à Sartrouville."
+      canonical={`${URL}legal`}
+      noindex
+    />
     <div className="relative pb-32 bg-gray-800">
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover"
           src="static/legal-pic.jpeg"
+          alt=""
         />
         <div className="absolute inset-0 bg-darkblue mix-blend-multiply" />
       </div>

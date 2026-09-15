@@ -60,8 +60,17 @@ function MyApp({ Component, pageProps }) {
     `}</Script>
       <DefaultSeo
         title={TITLE}
+        titleTemplate="%s"
+        defaultTitle={TITLE}
         description={META_DESCRIPTION}
-        openGraph={{ url: URL, images: [{ url: META_IMAGE }] }}
+        canonical={URL}
+        openGraph={{
+          type: "website",
+          locale: "fr_FR",
+          url: URL,
+          siteName: TITLE,
+          images: [{ url: META_IMAGE, width: 1200, height: 627, alt: TITLE }],
+        }}
       />
       <NextNProgress />
       <Component {...pageProps} />

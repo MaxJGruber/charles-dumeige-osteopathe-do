@@ -46,7 +46,7 @@ const PersonalSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/personal-section-pic.jpg"
-                  alt=""
+                  alt="Cabinet d'ostéopathie de Charles Dumeige"
                 />
               </div>
             </Zoom>

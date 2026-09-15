@@ -46,6 +46,7 @@ const SportsSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/istock-images/sportsman_small.jpeg"
+                  alt="Sportif en pleine activité physique"
                 />
               </div>
             </Fade>

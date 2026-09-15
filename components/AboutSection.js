@@ -47,7 +47,7 @@ const AboutSection = () => (
                   <img
                     className="absolute inset-0 h-full w-full object-cover"
                     src="static/profile-pic.jpg"
-                    alt=""
+                    alt="Portrait de Charles Dumeige, ostéopathe D.O à Sartrouville"
                   />
                 </div>
               </div>

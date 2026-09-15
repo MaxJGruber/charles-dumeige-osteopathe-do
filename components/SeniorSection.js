@@ -46,7 +46,7 @@ const SeniorSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/istock-images/seniorman_small.jpeg"
-                  alt=""
+                  alt="Homme sénior lors d'une séance d'ostéopathie"
                 />
               </div>
             </Fade>
@@ -166,7 +166,7 @@ const SeniorSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/istock-images/seniorwoman_small.jpeg"
-                  alt=""
+                  alt="Femme sénior consultant un ostéopathe"
                 />
               </div>
             </Fade>

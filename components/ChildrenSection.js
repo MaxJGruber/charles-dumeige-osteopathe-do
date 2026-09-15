@@ -46,7 +46,7 @@ const ChildrenSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/istock-images/childelbow_small.jpeg"
-                  alt=""
+                  alt="Examen ostéopathique du coude d'un enfant"
                 />
               </div>
             </Fade>
@@ -166,7 +166,7 @@ const ChildrenSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/istock-images/childleg_small.jpeg"
-                  alt=""
+                  alt="Ostéopathe examinant la jambe d'un enfant"
                 />
               </div>
             </Fade>

@@ -46,7 +46,7 @@ const BabiesSection = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/istock-images/baby_small.jpeg"
-                  alt=""
+                  alt="Nourrisson allongé lors d'une séance d'ostéopathie pédiatrique"
                 />
               </div>
             </Fade>

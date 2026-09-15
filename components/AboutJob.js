@@ -47,7 +47,7 @@ const AboutJob = () => (
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
                   src="static/about-job-pic.jpeg"
-                  alt=""
+                  alt="Mains d'un ostéopathe pratiquant une manipulation manuelle"
                 />
               </div>
             </Zoom>
