@@ -71,7 +71,15 @@ function MyApp({ Component, pageProps }) {
           locale: "fr_FR",
           url: URL,
           siteName: TITLE,
-          images: [{ url: META_IMAGE, width: 1200, height: 627, alt: TITLE }],
+          images: [
+            {
+              url: META_IMAGE,
+              width: 1200,
+              height: 627,
+              alt: "Charles Dumeige, ostéopathe D.O à Sartrouville",
+              type: "image/jpeg",
+            },
+          ],
         }}
         twitter={{ cardType: "summary_large_image" }}
         additionalMetaTags={[

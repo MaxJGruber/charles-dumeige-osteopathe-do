@@ -14,8 +14,13 @@ export const URL = "https://charles-dumeige-osteopathe.fr/";
 // like WhatsApp and others
 // The URL should be absolute, e.g.: https//www.domain.com/static/preview.jpg
 // Recommended size: 1200 x 627
+//
+// Captured from the live home page. Re-shoot it whenever the hero changes: the
+// previous card was a screenshot of the pre-2023 design and still advertised a
+// Paris address that no longer exists. Changing the filename is deliberate —
+// Facebook, LinkedIn and WhatsApp cache these hard by URL.
 export const META_IMAGE =
-  "https://charles-dumeige-osteopathe.fr/static/preview.png";
+  "https://charles-dumeige-osteopathe.fr/static/preview.jpg";
 
 // The Google Analytics tracking ID
 export const GA_TRACKING_ID = "G-RP4YW4NXQN";
