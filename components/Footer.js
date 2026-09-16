@@ -1,160 +1,111 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { DOCTOLIB_URL } from "components/Nav";
 
-const navigation = {
-  patients: [
-    { name: "Nourissons", href: "nourissons" },
-    { name: "Enfants", href: "enfants" },
-    { name: "Femmes enceintes", href: "enceintes" },
-    { name: "Adultes", href: "adultes" },
-    { name: "Séniors", href: "seniors" },
-    { name: "Sportifs", href: "sportifs" },
-  ],
-  presentation: [
-    { name: "L'ostéopathie", href: "osteopathie" },
-    { name: "L'ostéopathe", href: "osteopathe" },
-    { name: "Valeurs", href: "valeurs" },
-  ],
-  contact: [
-    {
-      name: "Sartrouville",
-      href: "/#sartrouville",
-    },
-  ],
-  externalLinks: [
-    {
-      name: "Doctolib",
-      href: "https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige",
-    },
-  ],
-  other: [{ name: "Mentions légales", href: "/legal" }],
-  social: [
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/charles-dumeige-osteopathe/",
-      icon: faLinkedin,
-    },
-  ],
-};
+const columns = [
+  {
+    heading: "Patients",
+    links: [
+      { name: "Nourrissons", href: "/patients#nourissons" },
+      { name: "Enfants", href: "/patients#enfants" },
+      { name: "Femmes enceintes", href: "/patients#enceintes" },
+      { name: "Adultes", href: "/patients#adultes" },
+      { name: "Séniors", href: "/patients#seniors" },
+      { name: "Sportifs", href: "/patients#sportifs" },
+    ],
+  },
+  {
+    heading: "En savoir plus",
+    links: [
+      { name: "L'ostéopathie", href: "/presentations#osteopathie" },
+      { name: "L'ostéopathe", href: "/presentations#osteopathe" },
+      { name: "Valeurs", href: "/presentations#valeurs" },
+      { name: "Tarifs", href: "/#tarifs" },
+    ],
+  },
+  {
+    heading: "Le cabinet",
+    links: [
+      { name: "Horaires et accès", href: "/#contact" },
+      { name: "Avis des patients", href: "/#avis" },
+      { name: "Mentions légales", href: "/legal" },
+    ],
+  },
+];
 
-const Footer = () => {
-  return (
-    <footer className="bg-white">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-4 xl:gap-8">
-          <div className="grid grid-cols-2 gap-8 xl:col-span-4">
-            <div className="md:grid md:grid-cols-3 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Patients
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.patients.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={`/patients#${item.href}`}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Présentations
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.presentation.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={`/presentations#${item.href}`}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Contacts
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.contact.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Liens Externes
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.externalLinks.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Autres
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.other.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+const Footer = () => (
+  <footer className="border-t border-rule bg-white">
+    <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+      <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
+        <div>
+          <img
+            alt="Charles Dumeige, ostéopathe D.O"
+            className="h-20 w-auto"
+            src="/static/logo.png"
+          />
+          <address className="mt-6 not-italic leading-relaxed text-ink-soft">
+            20 rue René Brûlay
+            <br />
+            78500 Sartrouville
+          </address>
+          <a
+            href="tel:0638697716"
+            className="mt-4 inline-block font-medium text-teal transition-colors hover:text-teal-deep"
+          >
+            06 38 69 77 16
+          </a>
         </div>
-        <div className="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex space-x-6 md:order-2">
-            {navigation.social.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-400 hover:text-gray-500"
-              >
-                <span className="sr-only">{item.name}</span>
-                <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
-              </a>
-            ))}
-          </div>
-          <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-            &copy; 2022 By Max Gruber
-          </p>
+
+        <div className="grid gap-10 sm:grid-cols-3">
+          {columns.map((column) => (
+            <div key={column.heading}>
+              <h3 className="font-display text-base text-ink">
+                {column.heading}
+              </h3>
+              <ul role="list" className="mt-4 space-y-2.5">
+                {column.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-ink-soft transition-colors hover:text-teal"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
-    </footer>
-  );
-};
+
+      <div className="mt-14 flex flex-col gap-4 border-t border-rule pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-ink-faint">
+          © {new Date().getFullYear()} Charles Dumeige, ostéopathe D.O
+        </p>
+        <div className="flex items-center gap-5">
+          <a
+            href={DOCTOLIB_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-ink-soft transition-colors hover:text-teal"
+          >
+            Doctolib
+          </a>
+          <a
+            href="https://www.linkedin.com/in/charles-dumeige-osteopathe/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-ink-faint transition-colors hover:text-teal"
+          >
+            <span className="sr-only">LinkedIn</span>
+            <FontAwesomeIcon icon={faLinkedin} className="h-5 w-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;
