@@ -6,6 +6,9 @@ class MyDocument extends Document {
       <Html lang="fr">
         <Head>
           <meta charSet="utf-8" />
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <meta name="theme-color" content="#0F6A8F" />
         </Head>
         <body>
           <Main />
