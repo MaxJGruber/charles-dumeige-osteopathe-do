@@ -1,5 +1,6 @@
 import { NextSeo } from "next-seo";
 import { URL } from "root/config";
+import StructuredData from "components/StructuredData";
 import HeroSection from "components/HeroSection";
 import Disclaimer from "components/Disclaimer";
 import BabiesSection from "components/BabiesSection";
@@ -10,12 +11,31 @@ import SeniorSection from "components/SeniorSection";
 import SportsSection from "components/SportsSection";
 import Divider from "components/Divider";
 
+const TITLE =
+  "Ostéopathe pour nourrisson, enfant et femme enceinte à Sartrouville";
+const DESCRIPTION =
+  "L'ostéopathie s'adresse à tous : nourrissons, enfants, femmes enceintes, adultes, séniors et sportifs. Découvrez la prise en charge adaptée à chacun.";
+const PAGE_URL = `${URL}patients`;
+
 const Patients = () => (
   <>
     <NextSeo
-      title="Ostéopathe pour nourrisson, enfant et femme enceinte à Sartrouville"
-      description="L'ostéopathie s'adresse à tous : nourrissons, enfants, femmes enceintes, adultes, séniors et sportifs. Découvrez la prise en charge adaptée à chacun."
-      canonical={`${URL}patients`}
+      title={TITLE}
+      description={DESCRIPTION}
+      canonical={PAGE_URL}
+      openGraph={{ url: PAGE_URL, title: TITLE, description: DESCRIPTION }}
+    />
+    <StructuredData
+      page={{
+        url: PAGE_URL,
+        title: TITLE,
+        description: DESCRIPTION,
+        image: "static/patients-hero-pic.jpeg",
+      }}
+      breadcrumbs={[
+        { name: "Accueil", url: URL },
+        { name: "Les patients", url: PAGE_URL },
+      ]}
     />
     <HeroSection
       title="Aller chez un ostéopathe..."

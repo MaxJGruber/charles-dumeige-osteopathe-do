@@ -1,4 +1,65 @@
 # Allow all crawlers
 User-agent: *
 Allow: /
+
+# AI crawlers and answer engines, named explicitly.
+#
+# These are allowed on purpose: they are how the practice gets surfaced and
+# cited when someone asks an assistant for an osteopath in Sartrouville.
+# Removing a block below opts the site out of that assistant's answers.
+
+# OpenAI — ChatGPT search, browsing, and training
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google — Gemini and AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft — Copilot
+User-agent: Bingbot
+Allow: /
+
+# Common Crawl, which seeds many downstream models
+User-agent: CCBot
+Allow: /
+
+# Apple Intelligence / Siri
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
 Sitemap: https://charles-dumeige-osteopathe.fr/sitemap.xml

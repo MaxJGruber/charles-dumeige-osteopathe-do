@@ -1,9 +1,15 @@
 import dynamic from "next/dynamic";
+import {
+  ADDRESS as PRACTICE_ADDRESS,
+  MAPS_LINK,
+  PHONE,
+  PHONE_DISPLAY,
+  OPENING_HOURS,
+} from "root/config";
 
 const Map = dynamic(() => import("components/Map"), { ssr: false });
 
-const ADDRESS = "20 rue René Brûlay, 78500 Sartrouville";
-const MAPS_LINK = "https://goo.gl/maps/4mhDD2yna4iP3xru9";
+const ADDRESS = `${PRACTICE_ADDRESS.street}, ${PRACTICE_ADDRESS.postalCode} ${PRACTICE_ADDRESS.locality}`;
 
 const transport = [
   "RER A, Sartrouville",
@@ -17,10 +23,30 @@ const access = [
   "Parking payant",
 ];
 
-const hours = [
-  { days: "Lundi au samedi", time: "8h30 à 20h30" },
-  { days: "Dimanche", time: "10h30 à 15h45" },
-];
+// Rendered from the same source as the opening-hours schema, so the table and
+// the structured data cannot drift apart. Sourced from the Google Business
+// Profile; see root/config.
+const DAY_LABELS = {
+  Monday: "Lundi",
+  Tuesday: "Mardi",
+  Wednesday: "Mercredi",
+  Thursday: "Jeudi",
+  Friday: "Vendredi",
+  Saturday: "Samedi",
+  Sunday: "Dimanche",
+};
+
+const formatTime = (time) => time.replace(":", "h").replace(/^0/, "");
+
+const hours = OPENING_HOURS.map(({ days, opens, closes }) => ({
+  days:
+    days.length > 1
+      ? `${DAY_LABELS[days[0]]} au ${DAY_LABELS[
+          days[days.length - 1]
+        ].toLowerCase()}`
+      : DAY_LABELS[days[0]],
+  time: `${formatTime(opens)} à ${formatTime(closes)}`,
+}));
 
 const Contact = () => (
   <section id="contact" className="bg-paper py-20 lg:py-28">
@@ -30,9 +56,9 @@ const Contact = () => (
           Horaires et accès
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-          Le centre médical Debussy est à 5 minutes à pied de la gare, sur la
-          place du marché. Charles Dumeige y consulte le mercredi, le jeudi,
-          deux samedis par mois et tous les dimanches pour les urgences.
+          Le centre médical Debussy est à 5 minutes à pied de la gare du RER A,
+          sur la place du marché. Charles Dumeige y consulte du lundi au samedi,
+          et le dimanche pour les demandes d&apos;urgence.
         </p>
       </div>
 
@@ -41,9 +67,17 @@ const Contact = () => (
         className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-16"
       >
         <div>
-          <p className="font-display text-2xl leading-snug text-teal">
-            {ADDRESS}
-          </p>
+          <address className="not-italic">
+            <p className="font-display text-2xl leading-snug text-teal">
+              {ADDRESS}
+            </p>
+            <a
+              href={`tel:${PHONE}`}
+              className="mt-3 inline-block font-medium text-ink transition-colors hover:text-teal"
+            >
+              {PHONE_DISPLAY}
+            </a>
+          </address>
 
           <dl className="mt-10 space-y-8">
             <div>

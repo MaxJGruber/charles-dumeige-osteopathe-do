@@ -8,14 +8,33 @@ import PriceList from "components/PriceList";
 import Reimbursements from "components/Reimbursements";
 import PracticalInfo from "components/PracticalInfo";
 import Reviews from "components/Reviews";
+import Faq from "components/Faq";
+import StructuredData from "components/StructuredData";
+import { FAQ } from "helpers/faq";
 import { fetchReviews, GOOGLE_REVIEW_URL } from "helpers/googleReviews";
+
+const TITLE = "Ostéopathe à Sartrouville (78) | Charles Dumeige D.O";
+const DESCRIPTION =
+  "Charles Dumeige, ostéopathe D.O à Sartrouville (78). Consultations au cabinet ou à domicile, 7j/7. Prise de rendez-vous en ligne.";
 
 const Index = ({ summary, reviews, reviewUrl }) => (
   <>
     <NextSeo
-      title="Ostéopathe à Sartrouville (78) | Charles Dumeige D.O"
-      description="Charles Dumeige, ostéopathe D.O à Sartrouville (78). Consultations au cabinet ou à domicile, 7j/7. Prise de rendez-vous en ligne."
+      title={TITLE}
+      description={DESCRIPTION}
       canonical={URL}
+      openGraph={{ url: URL, title: TITLE, description: DESCRIPTION }}
+    />
+    <StructuredData
+      page={{
+        url: URL,
+        title: TITLE,
+        description: DESCRIPTION,
+        image: "static/cover.png",
+      }}
+      breadcrumbs={[{ name: "Accueil", url: URL }]}
+      faq={FAQ}
+      summary={summary}
     />
     <HeroSection
       title="Bienvenue sur le site de votre ostéopathe..."
@@ -33,6 +52,7 @@ const Index = ({ summary, reviews, reviewUrl }) => (
     <Reimbursements />
     <Contact />
     <PracticalInfo />
+    <Faq />
     <Hook />
   </>
 );

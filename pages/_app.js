@@ -12,6 +12,7 @@ import {
   URL,
   META_IMAGE,
   GA_TRACKING_ID,
+  GEO,
 } from "root/config";
 import Footer from "components/Footer";
 import * as gtag from "helpers/gtag";
@@ -72,6 +73,26 @@ function MyApp({ Component, pageProps }) {
           siteName: TITLE,
           images: [{ url: META_IMAGE, width: 1200, height: 627, alt: TITLE }],
         }}
+        twitter={{ cardType: "summary_large_image" }}
+        additionalMetaTags={[
+          // Tells crawlers they may show a full-length preview and thumbnail,
+          // which is what lets a rich snippet carry the practice details.
+          {
+            name: "robots",
+            content:
+              "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+          },
+          { name: "author", content: "Charles Dumeige" },
+          // Geo tags: legacy, but still read by some local directories and
+          // cheap to carry for a single-location practice.
+          { name: "geo.region", content: "FR-IDF" },
+          { name: "geo.placename", content: "Sartrouville" },
+          {
+            name: "geo.position",
+            content: `${GEO.latitude};${GEO.longitude}`,
+          },
+          { name: "ICBM", content: `${GEO.latitude}, ${GEO.longitude}` },
+        ]}
       />
       <NextNProgress />
       <Component {...pageProps} />
