@@ -2,7 +2,8 @@ const consultations = [
   {
     price: "60",
     name: "Consultation générale",
-    detail: "Adulte, au cabinet.",
+    detail:
+      "Adolescent, adulte, femme enceinte, sénior, sportif. Au cabinet.",
   },
   {
     price: "50",

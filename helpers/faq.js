@@ -16,7 +16,8 @@ export const FAQ = [
   {
     question: "Combien coûte une séance d'ostéopathie à Sartrouville ?",
     answer:
-      "Au cabinet de Charles Dumeige à Sartrouville, la consultation générale pour un adulte est à 60 €. " +
+      "Au cabinet de Charles Dumeige à Sartrouville, la consultation générale pour un adolescent, un adulte, " +
+      "une femme enceinte, un sénior ou un sportif est à 60 €. " +
       "Elle est à 50 € pour un nourrisson ou un enfant de moins de 10 ans, à 75 € le dimanche et les jours fériés " +
       "pour les demandes d'urgence, et à 80 € à domicile. Ces honoraires sont indicatifs et peuvent varier selon " +
       "les soins réalisés ; le praticien vous avertit au préalable en cas de dépassement.",
@@ -44,7 +45,8 @@ export const FAQ = [
     question: "À partir de quel âge peut-on consulter un ostéopathe ?",
     answer:
       "L'ostéopathie s'adresse à tous les âges, du nouveau-né à la personne âgée. Charles Dumeige reçoit les " +
-      "nourrissons, les enfants, les femmes enceintes, les adultes, les séniors et les sportifs, en adaptant les " +
+      "nourrissons, les enfants, les adolescents, les femmes enceintes, les adultes, les séniors et les " +
+      "sportifs, en adaptant les " +
       "techniques à chaque type de corps.",
   },
   {
