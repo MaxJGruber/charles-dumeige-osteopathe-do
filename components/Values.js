@@ -30,34 +30,39 @@ const tiers = [
 ];
 
 const Values = () => (
-  <div className="bg-white" id="valeur">
-    <div className="max-w-7xl mx-auto pb-24 px-4 sm:px-6 lg:px-8">
-      <div className="sm:flex sm:flex-col sm:align-center">
-        <h2 className="text-3xl text-darkblue font-extrabold tracking-tight sm:text-xl sm:text-center">
-          Les quatres principes fondateurs de l'ostéopathie
-        </h2>
-      </div>
-      <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-2">
-        {tiers.map((tier) => (
-          <div
-            key={tier.name}
-            className="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200"
-          >
-            <div className="p-6">
-              <h2 className="text-lg leading-6 font-medium text-gray-900">
-                {tier.name}
-              </h2>
-              {tier.description.map((line) => (
-                <p key={line} className="mt-4 text-md text-gray-500">
-                  {line}
-                </p>
-              ))}
-            </div>
-          </div>
+  <section className="bg-white pb-20 lg:pb-28" id="valeurs">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <h2 className="font-display text-3xl leading-tight">
+        Les quatre principes fondateurs de l'ostéopathie
+      </h2>
+
+      {/* A closed set of four numbered principles, so the numbers are part of
+          the content rather than ornament. */}
+      <ol className="mt-12 grid gap-x-12 gap-y-10 sm:grid-cols-2">
+        {tiers.map((tier, i) => (
+          <li key={tier.name} className="border-t border-rule pt-6">
+            <span
+              className="font-display text-sm text-vertebra"
+              aria-hidden="true"
+            >
+              {i + 1}
+            </span>
+            <h3 className="mt-1 font-display text-xl leading-snug">
+              {tier.name}
+            </h3>
+            {tier.description.map((line) => (
+              <p
+                key={line}
+                className="mt-3 max-w-[62ch] leading-relaxed text-ink-soft"
+              >
+                {line}
+              </p>
+            ))}
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
-  </div>
+  </section>
 );
 
 export default Values;

@@ -1,0 +1,12 @@
+[build]
+  command = "yarn build"
+  publish = ".next"
+
+# Deploys the Next.js runtime, including the /_next/image optimizer that
+# next/image requests at runtime. Without it Netlify serves the build as a
+# static folder and every optimized image 404s.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "22"

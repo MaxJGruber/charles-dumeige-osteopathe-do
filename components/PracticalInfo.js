@@ -2,10 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMoneyBill1Wave,
   faCreditCard,
-  faHeadSideMask,
   faWheelchair,
   faComment,
-  faExclamationTriangle,
+  faCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faCcMastercard,
@@ -14,84 +13,50 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const features = [
-  {
-    name: "Paiement en espèces ou en chèque acceptée",
-    icon: faMoneyBill1Wave,
-  },
-  {
-    name: "Paiement par carte bancaire acceptée",
-    icon: faCreditCard,
-    isCreditCard: true,
-  },
-  {
-    name: "Respect des gestes barrières",
-    icon: faHeadSideMask,
-  },
-  {
-    name: "Accessible aux handicapés",
-    icon: faWheelchair,
-  },
-  {
-    name: "Consultation en anglais possible",
-    icon: faComment,
-  },
+  { name: "Espèces et chèques acceptés", icon: faMoneyBill1Wave },
+  { name: "Carte bancaire acceptée", icon: faCreditCard, isCreditCard: true },
+  { name: "Cabinet accessible aux personnes handicapées", icon: faWheelchair },
+  { name: "Consultation possible en anglais", icon: faComment },
   {
     name: "Carte Vitale non acceptée",
-    icon: faExclamationTriangle,
+    icon: faCircleExclamation,
     isWarning: true,
   },
 ];
 
 const PracticalInfo = () => (
-  <div className="py-12 bg-gray-50">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="lg:text-center">
-        <h2 className="text-base text-lightblue font-semibold tracking-wide uppercase">
-          INFORMATIONS PRATIQUES
-        </h2>
-      </div>
-      <div className="mt-10">
-        <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-          {features.map((feature) => (
-            <div key={feature.name} className="relative">
-              <dt className="flex items-center">
-                <div
-                  className={`absolute flex items-center justify-center h-12 w-12 rounded-md ${
-                    feature.isWarning ? "bg-yellow-500" : "bg-lightblue"
-                  } text-white`}
-                >
-                  <FontAwesomeIcon icon={feature.icon} size="2x" />
-                </div>
-                <p
-                  className={`ml-16 text-lg leading-6 font-medium ${
-                    feature.isWarning ? "text-yellow-500" : "text-gray-900"
-                  }`}
-                >
-                  {feature.name}
-                  {feature.isCreditCard && (
-                    <>
-                      {" "}
-                      (
-                      <span className="mx-1">
-                        <FontAwesomeIcon icon={faCcMastercard} size="lg" />
-                      </span>
-                      <span className="mx-1">
-                        <FontAwesomeIcon icon={faCcVisa} size="lg" />
-                      </span>
-                      <span className="mx-1">
-                        <FontAwesomeIcon icon={faCcAmex} size="lg" />
-                      </span>
-                      )
-                    </>
-                  )}
-                </p>
-              </dt>
-            </div>
-          ))}
-        </dl>
-      </div>
+  <section className="bg-paper py-20 lg:py-28">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <h2 className="font-display text-4xl leading-tight sm:text-5xl">
+        Sur place
+      </h2>
+
+      <ul className="mt-12 grid max-w-4xl gap-x-12 gap-y-5 sm:grid-cols-2">
+        {features.map((feature) => (
+          <li key={feature.name} className="flex items-start gap-4">
+            <FontAwesomeIcon
+              icon={feature.icon}
+              className={`mt-1 h-5 w-5 shrink-0 ${
+                feature.isWarning ? "text-vertebra" : "text-leaf"
+              }`}
+            />
+            <span
+              className={feature.isWarning ? "text-ink" : "text-ink-soft"}
+            >
+              {feature.name}
+              {feature.isCreditCard && (
+                <span className="ml-2 inline-flex items-center gap-1.5 align-middle text-ink-faint">
+                  <FontAwesomeIcon icon={faCcVisa} className="h-4 w-4" />
+                  <FontAwesomeIcon icon={faCcMastercard} className="h-4 w-4" />
+                  <FontAwesomeIcon icon={faCcAmex} className="h-4 w-4" />
+                </span>
+              )}
+            </span>
+          </li>
+        ))}
+      </ul>
     </div>
-  </div>
+  </section>
 );
 
 export default PracticalInfo;

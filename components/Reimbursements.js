@@ -1,28 +1,27 @@
 const Reimbursements = () => (
-  <div className="py-12 bg-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="lg:text-center">
-        <h2 className="text-base text-lightblue font-semibold tracking-wide uppercase">
-          Remboursements
-        </h2>
-        <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          Les consultations ostéopathiques peuvent être prises en charge
-          partiellement ou totalement selon les mutuelles
-        </p>
-        <p className="mt-5 mb-5 max-w-2xl text-sm text-gray-500 lg:mx-auto">
-          (mis à jour au 23/08/2019)
-        </p>
-        <button
-          type="button"
+  <section className="bg-white pb-20 lg:pb-28">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="rounded-2xl bg-leaf-wash p-8 sm:p-12">
+        <div className="max-w-[60ch]">
+          <h2 className="font-display text-2xl sm:text-3xl">Remboursements</h2>
+          <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+            La consultation d'ostéopathie n'est pas prise en charge par
+            l'Assurance Maladie, mais la plupart des mutuelles la remboursent,
+            en partie ou en totalité.
+          </p>
+        </div>
+        {/* Was a <button href>, which does nothing; this needs to be a link. */}
+        <a
           href="https://www.osteopathie.org/mutuelles.html"
           target="_blank"
-          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
+          rel="noreferrer"
+          className="mt-8 inline-flex rounded-full bg-leaf px-7 py-3.5 font-medium text-white transition-colors hover:bg-teal-deep"
         >
-          Voir les mutuelles qui remboursent
-        </button>
+          Vérifier votre mutuelle
+        </a>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default Reimbursements;
