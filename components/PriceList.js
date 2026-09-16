@@ -4,8 +4,14 @@ const features = [
     description: "Consultation générale d'ostéopathie",
   },
   {
+    price: "50€",
+    description:
+      "Consultation d'ostéopathie nourrisson/enfant (moins de 10 ans)",
+  },
+  {
     price: "75€",
-    description: "Consultation d'ostéopathie le dimanche",
+    description:
+      "Consultation d'ostéopathie le dimanche et les jours fériés",
   },
   {
     price: "80€",
