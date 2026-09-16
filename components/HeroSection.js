@@ -26,7 +26,7 @@ const HeroSection = ({
             <nav className="relative flex items-center justify-between">
               <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div className="flex items-center justify-between h-full w-full md:w-auto">
-                  <Link href="/" passhref>
+                  <Link href="/">
                     <img
                       alt="Charles Dumeige, ostéopathe D.O"
                       className="h-16 w-auto sm:h-20"
@@ -69,7 +69,7 @@ const HeroSection = ({
             >
               <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
-                  <Link href="/" passhref>
+                  <Link href="/">
                     <img
                       alt="Charles Dumeige, ostéopathe D.O"
                       className="h-16 w-auto sm:h-20"
