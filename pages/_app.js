@@ -4,7 +4,6 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import { useEffect } from "react";
 import Router from "next/router";
 import Script from "next/script";
-import { enableStaticRendering } from "mobx-react-lite";
 import { DefaultSeo } from "next-seo";
 import NextNProgress from "nextjs-progressbar";
 import {
@@ -22,10 +21,6 @@ import * as gtag from "helpers/gtag";
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
-  // use static rendering in SSR mode
-  if (typeof window === "undefined") {
-    enableStaticRendering(true);
-  }
   // Track pages
   useEffect(() => {
     const handleRouteChange = (url) => {
