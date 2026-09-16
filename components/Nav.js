@@ -7,6 +7,7 @@ export const DOCTOLIB_URL =
   "https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige";
 
 const navigation = [
+  { name: "Accueil", href: "/" },
   { name: "L'ostéopathie", href: "/presentations" },
   { name: "Les patients", href: "/patients" },
   { name: "Horaires & accès", href: "/#contact" },
