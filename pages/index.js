@@ -8,9 +8,9 @@ import PriceList from "components/PriceList";
 import Reimbursements from "components/Reimbursements";
 import PracticalInfo from "components/PracticalInfo";
 import Reviews from "components/Reviews";
-import { fetchReviews } from "helpers/googleReviews";
+import { fetchReviews, GOOGLE_REVIEW_URL } from "helpers/googleReviews";
 
-const Index = ({ summary, reviews }) => (
+const Index = ({ summary, reviews, reviewUrl }) => (
   <>
     <NextSeo
       title="Ostéopathe à Sartrouville (78) | Charles Dumeige D.O"
@@ -28,7 +28,7 @@ const Index = ({ summary, reviews }) => (
       secondButton={{ label: "En Savoir Plus", href: "/presentations" }}
     />
     <Featured />
-    <Reviews summary={summary} reviews={reviews} />
+    <Reviews summary={summary} reviews={reviews} reviewUrl={reviewUrl} />
     <Contact />
     <Hook />
     <PriceList />
@@ -40,7 +40,7 @@ const Index = ({ summary, reviews }) => (
 export async function getStaticProps() {
   const { summary, reviews } = await fetchReviews();
   return {
-    props: { summary, reviews },
+    props: { summary, reviews, reviewUrl: GOOGLE_REVIEW_URL },
     revalidate: 86400,
   };
 }

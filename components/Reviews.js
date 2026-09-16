@@ -1,4 +1,4 @@
-import { GOOGLE_REVIEW_URL } from "helpers/googleReviews";
+import { GOOGLE_REVIEW_FALLBACK_URL } from "helpers/googleReviews";
 
 const GoogleLogo = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" aria-hidden="true">
@@ -96,7 +96,7 @@ const CompactReview = ({ review }) => (
   </figure>
 );
 
-const Reviews = ({ summary, reviews }) => {
+const Reviews = ({ summary, reviews, reviewUrl = GOOGLE_REVIEW_FALLBACK_URL }) => {
   if (!reviews?.length) return null;
 
   // Content decides the layout: the longest review anchors the section, and
@@ -145,7 +145,7 @@ const Reviews = ({ summary, reviews }) => {
             patients à franchir le pas.
           </p>
           <a
-            href={GOOGLE_REVIEW_URL}
+            href={reviewUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 rounded-md bg-lightblue px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-darkblue focus:outline-none focus-visible:ring-2 focus-visible:ring-darkblue focus-visible:ring-offset-2"

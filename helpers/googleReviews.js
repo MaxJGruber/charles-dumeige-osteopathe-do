@@ -12,9 +12,16 @@ export const GOOGLE_PLACE_ID = process.env.GOOGLE_PLACE_ID || "";
 // Link behind the "Laissez-nous un avis" call to action. With a place id it
 // opens the review form for the listing; without one it falls back to a
 // search so the button is never broken.
+//
+// GOOGLE_PLACE_ID is server-only, so the place id variant must never be read
+// during render: the client would fall back and hydration would mismatch.
+// Pages pass the resolved url down from getStaticProps instead.
+export const GOOGLE_REVIEW_FALLBACK_URL =
+  "https://www.google.com/maps/search/?api=1&query=Charles+Dumeige+ost%C3%A9opathe+Sartrouville";
+
 export const GOOGLE_REVIEW_URL = GOOGLE_PLACE_ID
   ? `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`
-  : "https://www.google.com/maps/search/?api=1&query=Charles+Dumeige+ost%C3%A9opathe+Sartrouville";
+  : GOOGLE_REVIEW_FALLBACK_URL;
 
 // Used for the header summary when a call succeeds but omits the aggregate.
 const FALLBACK_SUMMARY = { rating: 5, total: 94 };
