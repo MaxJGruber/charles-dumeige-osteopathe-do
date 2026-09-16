@@ -1,4 +1,6 @@
 import "styles/globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import { useEffect } from "react";
 import Router from "next/router";
 import Script from "next/script";
@@ -14,6 +16,10 @@ import {
 } from "root/config";
 import Footer from "components/Footer";
 import * as gtag from "helpers/gtag";
+
+// The FontAwesome stylesheet is imported above, so disable its runtime
+// injection to avoid oversized icons before hydration.
+config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
   // use static rendering in SSR mode
@@ -40,6 +46,7 @@ function MyApp({ Component, pageProps }) {
         src="https://cdn.partoo.co/widget/prod/latest.js"
         data-token="a1c85f65-dfef-4160-b601-51456b0eecef"
         data-icon="message_logo_icon"
+        data-avatar-image-url={`${URL}static/widget-avatar.jpg`}
         data-color="#0F6A8F"
         data-policy-url="https://app.partoo.co/privacy/messaging/cf575e9a-27ab-4581-b61c-321e22ed0b1c?lang=fr"
         data-country="FR"
