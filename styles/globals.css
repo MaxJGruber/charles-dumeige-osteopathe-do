@@ -1,38 +1,128 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Palette sampled from the practice logo (public/static/logo.png): the navy
+   torso silhouette, its teal gradient, the leaves, and the red vertebrae. */
 @theme {
-  --color-darkblue: #124a75;
-  --color-darkblueHover: #a9c5cf;
-  --color-lightblue: #0f6a8f;
-  --color-lightblueHover: #e8f1f5;
-  --color-logo-navy: #0b4d71;
-  --color-logo-deep: #093961;
-  --color-logo-teal: #198f9b;
+  --color-ink: #00304f;
+  --color-ink-soft: #3d5f76;
+  /* Dark enough to clear 4.5:1 on both white and paper (4.78 / 5.25). */
+  --color-ink-faint: #566f83;
+
+  --color-teal: #0d6a86;
+  --color-teal-deep: #084e64;
+  --color-teal-wash: #eaf2f5;
+
+  /* The logo's bright leaf green reads at 3.4:1 under white text, so the
+     darker tone carries anything with text on or in it; the bright one is
+     kept for small non-text marks like the hero's bullets. */
+  --color-leaf: #1f7254;
+  --color-leaf-bright: #2f9d74;
+  --color-leaf-wash: #edf7f2;
+
+  /* The spine. Used sparingly and structurally; see .spine below. */
+  --color-vertebra: #c33038;
+
+  --color-paper: #f6f4ef;
+  --color-rule: #dcd8d0;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Aliases kept so older markup keeps rendering while it is migrated. */
+  --color-darkblue: #00304f;
+  --color-darkblueHover: #084e64;
+  --color-lightblue: #0d6a86;
+  --color-lightblueHover: #eaf2f5;
+  --color-logo-navy: #00304f;
+  --color-logo-deep: #002438;
+  --color-logo-teal: #0d6a86;
   --color-logo-seafoam: #52979f;
-  --color-logo-leaf: #43ad7d;
-  --color-logo-accent: #9d544f;
-  --color-logo-gray: #53575b;
+  --color-logo-leaf: #2f9d74;
+  --color-logo-accent: #c33038;
+  --color-logo-gray: #3d5f76;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Avenir, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Scoped to @layer base so the colour utilities (text-white, text-ink…) keep
+   winning: an unlayered `a { color: inherit }` outranks Tailwind's utility
+   layer and silently repaints every link in a button. */
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* Scroll reveals — see components/Reveal.js */
+/* Headings carry the personality; body text stays out of the way. */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    color: var(--color-ink);
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+}
+
+/* Keyboard focus stays visible everywhere, including over dark grounds. */
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---- The spine -------------------------------------------------------
+   The logo's red vertebrae, borrowed as the site's structural device: a
+   hairline running between sections with a single vertebra at the joint.
+   It marks where one section ends and the next begins, so it carries the
+   page's structure rather than decorating it. This is the only place the
+   red appears. */
+.spine {
+  position: relative;
+  height: 4.5rem;
+  background: inherit;
+}
+
+.spine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--color-rule);
+}
+
+.spine::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  border-radius: 9999px;
+  background: var(--color-vertebra);
+}
+
+/* Scroll reveals: see components/Reveal.js */
 .reveal {
   opacity: 0;
   transition: opacity var(--reveal-duration, 600ms) ease-out
