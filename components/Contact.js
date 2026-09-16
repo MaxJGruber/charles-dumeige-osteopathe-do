@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { Fade } from "react-awesome-reveal";
+import Reveal from "components/Reveal";
 import { CheckIcon } from "@heroicons/react/24/outline";
 
 const Map = dynamic(() => import("components/Map"), {
@@ -160,11 +160,11 @@ const Featured = () => (
             />
           </svg>
           <div className="relative mx-auto">
-            <Fade direction="right">
+            <Reveal animation="fade" direction="right">
               <div className="relative rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
                 <Map coordinates={[48.93587430271724, 2.1631031634520994]} />
               </div>
-            </Fade>
+            </Reveal>
           </div>
         </div>
       </div>

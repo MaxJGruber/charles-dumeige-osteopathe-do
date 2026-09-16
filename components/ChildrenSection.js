@@ -1,4 +1,4 @@
-import { Fade } from "react-awesome-reveal";
+import Reveal from "components/Reveal";
 
 const ChildrenSection = () => (
   <>
@@ -41,7 +41,7 @@ const ChildrenSection = () => (
             </svg>
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:pt-20 lg:pb-12">
-            <Fade direction="left">
+            <Reveal animation="fade" direction="left">
               <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
@@ -49,7 +49,7 @@ const ChildrenSection = () => (
                   alt="Examen ostéopathique du coude d'un enfant"
                 />
               </div>
-            </Fade>
+            </Reveal>
           </div>
         </div>
 
@@ -161,7 +161,7 @@ const ChildrenSection = () => (
             </svg>
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:pt-10">
-            <Fade direction="right">
+            <Reveal animation="fade" direction="right">
               <div className="relative pt-72 pb-20 rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
@@ -169,7 +169,7 @@ const ChildrenSection = () => (
                   alt="Ostéopathe examinant la jambe d'un enfant"
                 />
               </div>
-            </Fade>
+            </Reveal>
           </div>
         </div>
       </div>

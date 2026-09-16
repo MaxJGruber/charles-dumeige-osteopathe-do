@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import { Fade } from "react-awesome-reveal";
+import Reveal from "components/Reveal";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -138,13 +138,13 @@ const HeroSection = ({
       </div>
     </div>
     <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <Fade direction="left" style={{ height: "100%" }}>
+      <Reveal animation="fade" direction="left" style={{ height: "100%" }}>
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
           src={image}
           alt={imageAlt}
         />
-      </Fade>
+      </Reveal>
     </div>
   </div>
 );
