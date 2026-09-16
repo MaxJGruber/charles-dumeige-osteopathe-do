@@ -39,7 +39,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Script src="https://apps.elfsight.com/p/platform.js" defer></Script>
       <Script
         id="partoo-messaging-widget"
         type="module"

@@ -201,11 +201,6 @@ const Featured = () => (
           fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
         />
       </svg>
-      <div className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="elfsight-app-031e24ce-32e0-4a8b-9699-4264ab6d6b01"></div>
-        </div>
-      </div>
     </div>
   </div>
 );
