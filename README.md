@@ -16,6 +16,25 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
+## Google reviews
+
+The reviews section on the home page is built at deploy time and refreshed
+every 24h (ISR). It reads these variables from `.env.local` in development and
+from the host's environment in production. **If none are set the section is
+simply omitted from the page** — the build still succeeds.
+
+| Variable | Purpose |
+| --- | --- |
+| `GOOGLE_PLACES_API_KEY` | Places API key. |
+| `GOOGLE_PLACE_ID` | The practice's Place ID. Also builds the "leave a review" link. |
+
+The Places API returns **at most 5 reviews**, which is a hard limit of the
+endpoint rather than a setting. A one-off helper resolves the place id:
+
+```bash
+node scripts/find-place-id.js <places-api-key>   # -> GOOGLE_PLACE_ID
+```
+
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Learn More
