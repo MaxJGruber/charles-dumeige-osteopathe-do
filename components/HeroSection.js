@@ -18,28 +18,19 @@ const HeroSection = ({
   introduction,
   secondButton,
 }) => (
-  <div className="relative bg-white overflow-hidden">
+  <div className="relative bg-white overflow-hidden lg:min-h-screen">
     <div className="max-w-7xl mx-auto">
-      <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-48">
-        <svg
-          className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-          fill="currentColor"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          <polygon points="50,0 100,0 50,100 0,100" />
-        </svg>
-
+      <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:flex lg:min-h-screen lg:flex-col lg:max-w-2xl lg:w-full lg:pb-0">
         <Popover>
           <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
-            <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
+            <nav className="relative flex items-center justify-between">
               <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div className="flex items-center justify-between h-full w-full md:w-auto">
                   <Link href="/" passhref>
                     <img
-                      alt="Logo"
-                      className="h-8 w-auto sm:h-28"
-                      src="static/logo.jpg"
+                      alt="Charles Dumeige, ostéopathe D.O"
+                      className="h-16 w-auto sm:h-20"
+                      src="/static/logo.png"
                     />
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
@@ -49,12 +40,12 @@ const HeroSection = ({
                   </div>
                 </div>
               </div>
-              <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+              <div className="hidden md:flex md:items-center md:space-x-6 lg:space-x-4 xl:space-x-8">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-lg  text-gray-500 hover:text-gray-900"
+                    className="whitespace-nowrap text-base lg:text-sm xl:text-lg text-gray-500 transition-colors hover:text-darkblue"
                   >
                     {item.name}
                   </Link>
@@ -80,9 +71,9 @@ const HeroSection = ({
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <Link href="/" passhref>
                     <img
-                      alt="Logo"
-                      className="h-8 w-auto sm:h-28"
-                      src="static/logo.jpg"
+                      alt="Charles Dumeige, ostéopathe D.O"
+                      className="h-16 w-auto sm:h-20"
+                      src="/static/logo.png"
                     />
                   </Link>
                   <div className="-mr-2">
@@ -106,8 +97,16 @@ const HeroSection = ({
             </Popover.Panel>
           </Transition>
         </Popover>
+        <svg
+          className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+          fill="currentColor"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <polygon points="50,0 100,0 50,100 0,100" />
+        </svg>
 
-        <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+        <main className="mt-8 mx-auto w-full max-w-7xl px-4 sm:mt-10 sm:px-6 md:mt-12 lg:mt-0 lg:flex lg:flex-1 lg:flex-col lg:justify-center lg:px-8 lg:pb-16">
           <div className="sm:text-center lg:text-left">
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
               <span className="block xl:inline">{title}</span>{" "}
@@ -128,7 +127,7 @@ const HeroSection = ({
               <div className="mt-3 sm:mt-0 sm:ml-3">
                 <Link
                   href={secondButton.href}
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-lightblue bg-lightblueHover hover:bg-darkblueHover hover:text-white md:py-4 md:text-lg md:px-10"
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-lightblue bg-lightblueHover hover:bg-darkblue hover:text-white md:py-4 md:text-lg md:px-10"
                 >
                   {secondButton.label}
                 </Link>
