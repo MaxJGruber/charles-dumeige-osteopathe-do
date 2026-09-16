@@ -1,13 +1,12 @@
-import { Fragment } from "react";
 import Link from "next/link";
-import Reveal from "components/Reveal";
-import { Popover, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Nav, { DOCTOLIB_URL } from "components/Nav";
 
-const navigation = [
-  { name: "Présentations", href: "/presentations" },
-  { name: "Patients", href: "/patients" },
-  { name: "Contact & Informations", href: "/#contact" },
+// Facts someone in pain wants before anything else: can I be seen, and how do
+// I get there. Kept to three so the row stays scannable.
+const reassurances = [
+  "Consultations 7j/7",
+  "À 5 min à pied du RER A",
+  "Cabinet ou domicile",
 ];
 
 const HeroSection = ({
@@ -18,133 +17,61 @@ const HeroSection = ({
   introduction,
   secondButton,
 }) => (
-  <div className="relative bg-white overflow-hidden lg:min-h-screen">
-    <div className="max-w-7xl mx-auto">
-      <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:flex lg:min-h-screen lg:flex-col lg:max-w-2xl lg:w-full lg:pb-0">
-        <Popover>
-          <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
-            <nav className="relative flex items-center justify-between">
-              <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                <div className="flex items-center justify-between h-full w-full md:w-auto">
-                  <Link href="/">
-                    <img
-                      alt="Charles Dumeige, ostéopathe D.O"
-                      className="h-16 w-auto sm:h-20"
-                      src="/static/logo.png"
-                    />
-                  </Link>
-                  <div className="-mr-2 flex items-center md:hidden">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightblue">
-                      <Bars3Icon className="h-6 w-6" />
-                    </Popover.Button>
-                  </div>
-                </div>
-              </div>
-              <div className="hidden md:flex md:items-center md:space-x-6 lg:space-x-4 xl:space-x-8">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="whitespace-nowrap text-base lg:text-sm xl:text-lg text-gray-500 transition-colors hover:text-darkblue"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </nav>
-          </div>
+  <div className="relative bg-paper">
+    <Nav />
 
-          <Transition
-            as={Fragment}
-            enter="duration-150 ease-out"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="duration-100 ease-in"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
+    {/* The text column keeps the 7xl grid every other section uses, while the
+        photo runs off the right edge of the window. */}
+    <div className="grid items-center gap-12 pb-16 pl-5 pr-5 pt-6 sm:pl-8 sm:pr-8 lg:grid-cols-[minmax(0,34rem)_minmax(0,1fr)] lg:gap-16 lg:pb-24 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-0 lg:pt-10">
+      <div className="max-w-xl">
+        <h1 className="font-display text-[2.6rem] leading-[1.05] tracking-[-0.02em] sm:text-6xl">
+          {title}
+          <span className="mt-2 block text-teal">{title2}</span>
+        </h1>
+
+        <p className="mt-7 max-w-[54ch] text-lg leading-relaxed text-ink-soft">
+          {introduction}
+        </p>
+
+        <div className="mt-9 flex flex-wrap items-center gap-3">
+          <Link
+            href={DOCTOLIB_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full bg-teal px-7 py-3.5 text-base font-medium text-white transition-colors hover:bg-teal-deep"
           >
-            <Popover.Panel
-              focus
-              className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-            >
-              <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-                <div className="px-5 pt-4 flex items-center justify-between">
-                  <Link href="/">
-                    <img
-                      alt="Charles Dumeige, ostéopathe D.O"
-                      className="h-16 w-auto sm:h-20"
-                      src="/static/logo.png"
-                    />
-                  </Link>
-                  <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightblue">
-                      <XMarkIcon className="h-6 w-6" />
-                    </Popover.Button>
-                  </div>
-                </div>
-                <div className="px-2 pt-2 pb-3 space-y-1">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </Popover.Panel>
-          </Transition>
-        </Popover>
-        <svg
-          className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-          fill="currentColor"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          <polygon points="50,0 100,0 50,100 0,100" />
-        </svg>
+            Prendre rendez-vous
+          </Link>
+          <Link
+            href={secondButton.href}
+            className="rounded-full px-7 py-3.5 text-base font-medium text-ink ring-1 ring-ink/20 transition-colors hover:bg-white hover:ring-ink/40"
+          >
+            {secondButton.label}
+          </Link>
+        </div>
 
-        <main className="mt-8 mx-auto w-full max-w-7xl px-4 sm:mt-10 sm:px-6 md:mt-12 lg:mt-0 lg:flex lg:flex-1 lg:flex-col lg:justify-center lg:px-8 lg:pb-16">
-          <div className="sm:text-center lg:text-left">
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block xl:inline">{title}</span>{" "}
-              <span className="block text-lightblue xl:inline">{title2}</span>
-            </h1>
-            <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-              {introduction}
-            </p>
-            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <div className="rounded-md shadow">
-                <Link
-                  href="https://www.doctolib.fr/osteopathe/sartrouville/charles-dumeige"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-lightblue hover:bg-darkblue  md:py-4 md:text-lg md:px-10"
-                >
-                  Prendre Rendez-vous
-                </Link>
-              </div>
-              <div className="mt-3 sm:mt-0 sm:ml-3">
-                <Link
-                  href={secondButton.href}
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-lightblue bg-lightblueHover hover:bg-darkblue hover:text-white md:py-4 md:text-lg md:px-10"
-                >
-                  {secondButton.label}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </main>
+        <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-2 text-[0.95rem] text-ink-faint">
+          {reassurances.map((item) => (
+            <li key={item} className="flex items-center gap-2">
+              <span
+                className="h-1.5 w-1.5 rounded-full bg-leaf"
+                aria-hidden="true"
+              />
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
-    </div>
-    <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <Reveal animation="fade" direction="left" style={{ height: "100%" }}>
+
+      {/* The photo runs to the container edge on large screens so the page
+          opens on the practice itself rather than on a framed card. */}
+      <div className="relative">
         <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+          className="h-64 w-full rounded-3xl object-cover sm:h-96 lg:h-[34rem] lg:rounded-l-3xl lg:rounded-r-none"
           src={image}
           alt={imageAlt}
         />
-      </Reveal>
+      </div>
     </div>
   </div>
 );
