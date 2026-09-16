@@ -1,78 +1,82 @@
-import {
-  ChatBubbleBottomCenterTextIcon,
-  GlobeAltIcon,
-  BoltIcon,
-  ScaleIcon,
-} from "@heroicons/react/24/outline";
+// The three disciplines Charles practises, each with the plain-language
+// version of what it means for the patient.
+const disciplines = [
+  {
+    name: "Générale",
+    description:
+      "Le squelette, les articulations et les muscles : dos, nuque, épaules, genoux. Le motif de consultation le plus courant.",
+  },
+  {
+    name: "Viscérale",
+    description:
+      "Les organes et leurs enveloppes. Utile sur les troubles digestifs, les reflux du nourrisson ou les douleurs qui reviennent sans cause mécanique.",
+  },
+  {
+    name: "Crânienne",
+    description:
+      "Les os du crâne et leurs micro-mobilités. Le terrain des plagiocéphalies du nourrisson, des maux de tête et des troubles du sommeil.",
+  },
+];
 
-const features = [
+// What a first consultation is actually like, since most people booking have
+// never seen an osteopath and are quietly wondering if it will hurt.
+const expectations = [
   {
-    id: 1,
-    name: "A l'écoute du patient",
-    description:
-      "Une attitude active dans l'approche relationnelle avec le patient, toujours à l'écoute et disponible.",
-    icon: GlobeAltIcon,
+    title: "Une séance dure environ 45 minutes",
+    body: "Un temps d'échange sur vos douleurs et vos antécédents, puis le traitement manuel.",
   },
   {
-    id: 2,
-    name: '"Un mal pour un bien"',
-    description:
-      "Suivant l'algie du patient, il se peut qu'il ressente des douleurs durant la séance mais qui finissent par aboutir à un sentiment de bien-être à la fin de la consultation.",
-    icon: ScaleIcon,
+    title: "Vous pouvez être courbaturé ensuite",
+    body: "C'est normal. Comptez 2 à 3 jours pour que la douleur s'atténue complètement.",
   },
   {
-    id: 3,
-    name: "Résultats rapides",
-    description:
-      "Il faut en moyenne 2 à 3 jours de récupération après une séance pour voir les douleurs s'atténuer complétement.",
-    icon: BoltIcon,
-  },
-  {
-    id: 4,
-    name: "Notifications mobiles",
-    description:
-      "Disponible par téléphone & email pour les contacts directs. Prise de rendez-vous possible sur doctolib.fr.",
-    icon: ChatBubbleBottomCenterTextIcon,
+    title: "Charles se déplace à domicile",
+    body: "Sur rendez-vous téléphonique, quand le déplacement est difficile.",
   },
 ];
 
 const Featured = () => (
-  <div className="py-12 bg-gray-50">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="lg:text-center">
-        <h2 className="text-base text-lightblue font-semibold tracking-wide uppercase">
-          L'OSTÉOPATHIE
+  <section className="bg-white py-20 lg:py-28">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="max-w-2xl">
+        <h2 className="font-display text-4xl leading-tight sm:text-5xl">
+          Trois approches, un seul corps
         </h2>
-        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          Générale - Viscérale - Crânienne
-        </p>
-        <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          Dans son cabinet ou à domicile, Charles Dumeige prend en charge tout
-          type de patient.
+        <p className="mt-6 max-w-[62ch] text-lg leading-relaxed text-ink-soft">
+          L'ostéopathie traite le corps comme un ensemble. Charles Dumeige
+          combine les trois approches selon ce que votre corps demande, au
+          cabinet comme à domicile.
         </p>
       </div>
 
-      <div className="mt-10">
-        <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-          {features.map((feature) => (
-            <div key={feature.name} className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-lightblue text-white">
-                  <feature.icon className="h-6 w-6" />
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  {feature.name}
-                </p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                {feature.description}
+      {/* Set as a definition list: each discipline is a term and its meaning,
+          which is exactly what this content is. */}
+      <dl className="mt-14 grid gap-px overflow-hidden rounded-2xl bg-rule sm:grid-cols-3">
+        {disciplines.map((item) => (
+          <div key={item.name} className="bg-paper p-8">
+            <dt className="font-display text-2xl text-teal">{item.name}</dt>
+            <dd className="mt-3 leading-relaxed text-ink-soft">
+              {item.description}
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <div className="mt-20 border-t border-rule pt-12">
+        <h3 className="font-display text-2xl">Votre première séance</h3>
+        <dl className="mt-8 grid gap-10 sm:grid-cols-3">
+          {expectations.map((item) => (
+            <div key={item.title}>
+              <dt className="font-medium text-ink">{item.title}</dt>
+              <dd className="mt-2 leading-relaxed text-ink-soft">
+                {item.body}
               </dd>
             </div>
           ))}
         </dl>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default Featured;

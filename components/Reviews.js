@@ -27,7 +27,7 @@ const Stars = ({ rating, className = "h-4 w-4" }) => (
       <svg
         key={index}
         className={`${className} ${
-          index < Math.round(rating) ? "text-amber-400" : "text-gray-300"
+          index < Math.round(rating) ? "text-amber-400" : "text-rule"
         }`}
         fill="currentColor"
         viewBox="0 0 20 20"
@@ -50,17 +50,17 @@ const shortName = (author) => {
 const Attribution = ({ review, className = "" }) => (
   <footer className={`flex items-center gap-3 ${className}`}>
     <span
-      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-lightblue/10 text-sm font-semibold text-lightblue"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-wash text-sm font-semibold text-teal"
       aria-hidden="true"
     >
       {review.initial}
     </span>
     <div className="min-w-0">
-      <cite className="block truncate not-italic font-semibold text-darkblue">
+      <cite className="block truncate not-italic font-semibold text-ink">
         {shortName(review.author)}
       </cite>
       {review.relativeTime && (
-        <span className="block text-sm text-gray-500">
+        <span className="block text-sm text-ink-faint">
           {review.relativeTime}
         </span>
       )}
@@ -71,15 +71,15 @@ const Attribution = ({ review, className = "" }) => (
 // The longest review, given room to run in full: it carries the most detail
 // and does the most to reassure someone deciding whether to book.
 const FeaturedReview = ({ review }) => (
-  <figure className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-gray-50 p-8 pt-16 sm:p-10 sm:pt-20">
+  <figure className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-paper p-8 pt-16 sm:p-10 sm:pt-20">
     <span
-      className="pointer-events-none absolute -top-6 left-6 select-none font-serif text-[9rem] leading-none text-lightblue/10"
+      className="pointer-events-none absolute -top-6 left-6 select-none font-serif text-[9rem] leading-none text-teal/15"
       aria-hidden="true"
     >
       &ldquo;
     </span>
     <Stars rating={review.rating} className="relative h-5 w-5" />
-    <blockquote className="relative mt-6 flex-1 text-lg leading-relaxed text-gray-700 sm:text-xl sm:leading-relaxed">
+    <blockquote className="relative mt-6 flex-1 text-lg leading-relaxed text-ink-soft sm:text-xl sm:leading-relaxed">
       {review.text}
     </blockquote>
     <Attribution review={review} className="relative mt-8 pt-2" />
@@ -87,9 +87,9 @@ const FeaturedReview = ({ review }) => (
 );
 
 const CompactReview = ({ review }) => (
-  <figure className="flex flex-col rounded-2xl bg-gray-50 p-6">
+  <figure className="flex flex-col rounded-2xl bg-paper p-6">
     <Stars rating={review.rating} />
-    <blockquote className="mt-3 flex-1 leading-relaxed text-gray-700">
+    <blockquote className="mt-3 flex-1 leading-relaxed text-ink-soft">
       {review.text}
     </blockquote>
     <Attribution review={review} className="mt-5" />
@@ -110,27 +110,24 @@ const Reviews = ({ summary, reviews, reviewUrl = GOOGLE_REVIEW_FALLBACK_URL }) =
   const formattedRating = summary.rating.toFixed(1).replace(".", ",");
 
   return (
-    <div className="py-12 bg-white" id="avis">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="text-base text-lightblue font-semibold tracking-wide uppercase">
-            Avis des patients
-          </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+    <section className="bg-white py-20 lg:py-28" id="avis">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-4xl leading-tight sm:text-5xl">
             Ils sont repartis soulagés
-          </p>
-          <div className="mt-4 flex items-center gap-3 lg:justify-center">
-            <span className="text-2xl font-semibold text-darkblue">
+          </h2>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <span className="font-display text-2xl text-ink">
               {formattedRating}
             </span>
             <Stars rating={summary.rating} className="h-5 w-5" />
-            <span className="text-gray-500">
+            <span className="text-ink-faint">
               {summary.total} avis sur Google
             </span>
           </div>
         </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <FeaturedReview review={featured} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
             {secondary.map((review) => (
@@ -140,7 +137,7 @@ const Reviews = ({ summary, reviews, reviewUrl = GOOGLE_REVIEW_FALLBACK_URL }) =
         </div>
 
         <div className="mt-10 flex flex-col items-center gap-4">
-          <p className="max-w-md text-center text-gray-500">
+          <p className="max-w-md text-center text-ink-soft">
             Vous avez consulté récemment ? Votre retour aide les futurs
             patients à franchir le pas.
           </p>
@@ -148,14 +145,14 @@ const Reviews = ({ summary, reviews, reviewUrl = GOOGLE_REVIEW_FALLBACK_URL }) =
             href={reviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-md bg-lightblue px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-darkblue focus:outline-none focus-visible:ring-2 focus-visible:ring-darkblue focus-visible:ring-offset-2"
+            className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 font-medium text-ink ring-1 ring-ink/20 transition-colors hover:bg-paper"
           >
             <GoogleLogo className="h-5 w-5" />
             Laisser un avis
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

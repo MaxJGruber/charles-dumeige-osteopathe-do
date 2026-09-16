@@ -1,60 +1,62 @@
-const features = [
+const consultations = [
   {
-    price: "60€",
-    description: "Consultation générale d'ostéopathie",
+    price: "60",
+    name: "Consultation générale",
+    detail: "Adulte, au cabinet.",
   },
   {
-    price: "50€",
-    description:
-      "Consultation d'ostéopathie nourrisson/enfant (moins de 10 ans)",
+    price: "50",
+    name: "Nourrisson et enfant",
+    detail: "Moins de 10 ans.",
   },
   {
-    price: "75€",
-    description:
-      "Consultation d'ostéopathie le dimanche et les jours fériés",
+    price: "75",
+    name: "Dimanche et jours fériés",
+    detail: "Pour les demandes d'urgence.",
   },
   {
-    price: "80€",
-    description:
-      "Consultation d'ostéopathie à domicile (à prévoir par contact téléphonique uniquement)",
+    price: "80",
+    name: "À domicile",
+    detail: "À convenir par téléphone uniquement.",
   },
 ];
 
 const PriceList = () => (
-  <div className="py-12 bg-gray-50">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="lg:text-center">
-        <h2 className="text-base text-lightblue font-semibold tracking-wide uppercase">
-          Tarifs
-        </h2>
-      </div>
-      <div className="mt-10">
-        <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-          {features.map((feature, i) => (
-            <div key={i} className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-lightblue text-white">
-                  {feature.price}
-                </div>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                {feature.description}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-      <div className="lg:text-center">
-        <p className="mt-10 max-w-2xl text-sm text-gray-500 lg:mx-auto">
-          Ces honoraires vous sont communiqués à titre indicatif par le
-          praticien. Ils peuvent varier selon le type de soins finalement
-          réalisés en cabinet, le nombre de consultations et les actes
-          additionnels nécessaires. En cas de dépassement des tarifs, le
-          praticien doit en avertir préalablement le patient.
-        </p>
-      </div>
+  <section className="bg-white py-20 lg:py-28" id="tarifs">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <h2 className="font-display text-4xl leading-tight sm:text-5xl">
+        Tarifs
+      </h2>
+
+      <dl className="mt-12 max-w-4xl">
+        {consultations.map((item) => (
+          <div
+            key={item.name}
+            className="flex items-baseline gap-6 border-t border-rule py-6 last:border-b"
+          >
+            <dt className="min-w-0 flex-1">
+              <span className="block text-lg font-medium text-ink">
+                {item.name}
+              </span>
+              <span className="mt-1 block text-ink-soft">{item.detail}</span>
+            </dt>
+            {/* Tabular figures keep the column of prices optically aligned. */}
+            <dd className="font-display text-3xl tabular-nums text-teal">
+              {item.price}
+              <span className="ml-0.5 text-xl">€</span>
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <p className="mt-8 max-w-[62ch] text-sm leading-relaxed text-ink-faint">
+        Ces honoraires vous sont communiqués à titre indicatif. Ils peuvent
+        varier selon le type de soins finalement réalisés en cabinet, le nombre
+        de consultations et les actes additionnels nécessaires. En cas de
+        dépassement, le praticien vous en avertit au préalable.
+      </p>
     </div>
-  </div>
+  </section>
 );
 
 export default PriceList;

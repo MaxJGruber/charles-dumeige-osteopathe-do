@@ -29,11 +29,11 @@ const Index = ({ summary, reviews, reviewUrl }) => (
     />
     <Featured />
     <Reviews summary={summary} reviews={reviews} reviewUrl={reviewUrl} />
-    <Contact />
-    <Hook />
     <PriceList />
     <Reimbursements />
+    <Contact />
     <PracticalInfo />
+    <Hook />
   </>
 );
 

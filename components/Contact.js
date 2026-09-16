@@ -1,208 +1,108 @@
 import dynamic from "next/dynamic";
-import Reveal from "components/Reveal";
-import { CheckIcon } from "@heroicons/react/24/outline";
 
-const Map = dynamic(() => import("components/Map"), {
-  ssr: false,
-});
+const Map = dynamic(() => import("components/Map"), { ssr: false });
 
-const SARTROUVILLE_ADDRESS = [
-  {
-    id: 1,
-    name: "20 Rue René Brûlay, 78500, Sartrouville",
-    googleMapsLink: "https://goo.gl/maps/4mhDD2yna4iP3xru9",
-  },
+const ADDRESS = "20 rue René Brûlay, 78500 Sartrouville";
+const MAPS_LINK = "https://goo.gl/maps/4mhDD2yna4iP3xru9";
+
+const transport = [
+  "RER A, Sartrouville",
+  "Bus 5, Convention",
+  "Bus 5 et 25, Turgot",
 ];
 
-const Featured = () => (
-  <div id="contact" className="py-16 bg-white overflow-hidden lg:py-24">
-    <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-      <svg
-        className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
-        width={404}
-        height={784}
-        fill="none"
-        viewBox="0 0 404 784"
-      >
-        <defs>
-          <pattern
-            id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
-            x={0}
-            y={0}
-            width={20}
-            height={20}
-            patternUnits="userSpaceOnUse"
-          >
-            <rect
-              x={0}
-              y={0}
-              width={4}
-              height={4}
-              className="text-gray-200"
-              fill="currentColor"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width={404}
-          height={784}
-          fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
-        />
-      </svg>
+const access = [
+  "1er sous-sol, avec ascenseur",
+  "Accès handicapé",
+  "Parking payant",
+];
 
-      <div className="relative lg:text-center">
-        <h2 className="text-base text-lightblue font-semibold tracking-wide uppercase">
+const hours = [
+  { days: "Lundi au samedi", time: "8h30 à 20h30" },
+  { days: "Dimanche", time: "10h30 à 15h45" },
+];
+
+const Contact = () => (
+  <section id="contact" className="bg-paper py-20 lg:py-28">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="max-w-2xl">
+        <h2 className="font-display text-4xl leading-tight sm:text-5xl">
           Horaires et accès
         </h2>
-        <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
-          Charles Dumeige exerce dans un tout nouveau cabinet.
+        <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+          Le centre médical Debussy est à 5 minutes à pied de la gare, sur la
+          place du marché. Charles Dumeige y consulte le mercredi, le jeudi,
+          deux samedis par mois et tous les dimanches pour les urgences.
         </p>
       </div>
+
       <div
-        className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
         id="sartrouville"
+        className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-16"
       >
-        <div className="relative">
-          <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-            À Sartrouville
-          </h3>
-          <p className="mt-3 text-lg text-gray-500">
-            Le centre médical Debussy est situé à 5 min à pied de la gare, sur
-            la place du marché. Le pôle médical est flambant neuf et comporte 4
-            médecins, une sage femme, 2 infirmières et une hypnothérapeute.
-            Votre ostéopathe Charles Dumeige, vous y accueille le mercredi, le
-            jeudi, 2 samedis par mois et tous les dimanches pour les demandes
-            d'urgences.
+        <div>
+          <p className="font-display text-2xl leading-snug text-teal">
+            {ADDRESS}
           </p>
 
-          <dl className="mt-10 space-y-10">
-            {SARTROUVILLE_ADDRESS.map((item) => (
-              <div key={item.id} className="relative">
-                <dt>
-                  <CheckIcon className="absolute h-6 w-6 text-green-500" />
-                  <p className="ml-9 text-xl leading-6 font-medium text-gray-900">
-                    {item.name}
-                  </p>
-                </dt>
-                <div className="lg:mx-auto lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-5 lg:items-start">
-                  <dd className="mt-5 ml-9 text-base prose text-gray-500">
-                    <p className="font-bold">Moyens de transport:</p>
-                    <ul role="list">
-                      <li>RER - Sartrouville (ligne A)</li>
-                      <li>Bus - Convention (ligne 5)</li>
-                      <li>Bus - Turgot (lignes 25 et 5)</li>
-                    </ul>
-                  </dd>
-                  <dd className="mt-5 text-base prose text-gray-500">
-                    <p className="font-bold">Informations pratiques:</p>
-                    <ul role="list">
-                      <li>1er sous-sol avec ascenseur</li>
-                      <li>Accès handicapé</li>
-                      <li>Parking payant</li>
-                    </ul>
-                  </dd>
-                  <dd className="ml-9 text-base prose text-gray-500 col-span-2">
-                    <p className="font-bold">Horaires:</p>
-                    <ul role="list">
-                      <li>
-                        <strong>LUNDI au SAMEDI:</strong> 8H30 à 20H30
-                      </li>
-                      <li>
-                        <strong>DIMANCHE:</strong> 10H30 à 15H45
-                      </li>
-                    </ul>
-                  </dd>
-                </div>
-                <a href={item.googleMapsLink}>
-                  <button
-                    type="button"
-                    className="mt-2 ml-9 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
-                  >
-                    Plannifiez votre itinéraire
-                  </button>
-                </a>
+          <dl className="mt-10 space-y-8">
+            <div>
+              <dt className="font-medium text-ink">Horaires</dt>
+              <dd className="mt-3">
+                <ul className="space-y-1.5">
+                  {hours.map((slot) => (
+                    <li
+                      key={slot.days}
+                      className="flex flex-wrap justify-between gap-x-6 border-b border-rule pb-1.5 text-ink-soft sm:max-w-md"
+                    >
+                      <span>{slot.days}</span>
+                      <span className="tabular-nums text-ink">{slot.time}</span>
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
+
+            <div className="grid gap-8 sm:grid-cols-2">
+              <div>
+                <dt className="font-medium text-ink">Y venir</dt>
+                <dd className="mt-3">
+                  <ul className="space-y-1.5 text-ink-soft">
+                    {transport.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                </dd>
               </div>
-            ))}
+              <div>
+                <dt className="font-medium text-ink">Sur place</dt>
+                <dd className="mt-3">
+                  <ul className="space-y-1.5 text-ink-soft">
+                    {access.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            </div>
           </dl>
+
+          <a
+            href={MAPS_LINK}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-10 inline-flex rounded-full bg-teal px-7 py-3.5 font-medium text-white transition-colors hover:bg-teal-deep"
+          >
+            Ouvrir dans Google Maps
+          </a>
         </div>
 
-        <div className="mt-10 -mx-4 relative lg:mt-0">
-          <svg
-            className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-            width={784}
-            height={404}
-            fill="none"
-            viewBox="0 0 784 404"
-          >
-            <defs>
-              <pattern
-                id="ca9667ae-9f92-4be7-abcb-9e3d727f2941"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={784}
-              height={404}
-              fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
-            />
-          </svg>
-          <div className="relative mx-auto">
-            <Reveal animation="fade" direction="right">
-              <div className="relative rounded-2xl shadow-xl overflow-hidden border-2 border-solid border-lightblue">
-                <Map coordinates={[48.93587430271724, 2.1631031634520994]} />
-              </div>
-            </Reveal>
-          </div>
+        <div className="overflow-hidden rounded-2xl ring-1 ring-ink/10">
+          <Map coordinates={[48.93587430271724, 2.1631031634520994]} />
         </div>
       </div>
-
-      <svg
-        className="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
-        width={404}
-        height={784}
-        fill="none"
-        viewBox="0 0 404 784"
-      >
-        <defs>
-          <pattern
-            id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
-            x={0}
-            y={0}
-            width={20}
-            height={20}
-            patternUnits="userSpaceOnUse"
-          >
-            <rect
-              x={0}
-              y={0}
-              width={4}
-              height={4}
-              className="text-gray-200"
-              fill="currentColor"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width={404}
-          height={784}
-          fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
-        />
-      </svg>
     </div>
-  </div>
+  </section>
 );
 
-export default Featured;
+export default Contact;
