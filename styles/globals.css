@@ -1,6 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-darkblue: #124a75;
+  --color-darkblueHover: #a9c5cf;
+  --color-lightblue: #0f6a8f;
+  --color-lightblueHover: #e8f1f5;
+  --color-logo-navy: #0b4d71;
+  --color-logo-deep: #093961;
+  --color-logo-teal: #198f9b;
+  --color-logo-seafoam: #52979f;
+  --color-logo-leaf: #43ad7d;
+  --color-logo-accent: #9d544f;
+  --color-logo-gray: #53575b;
+}
 
 html,
 body {

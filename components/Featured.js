@@ -1,9 +1,9 @@
 import {
-  AnnotationIcon,
+  ChatBubbleBottomCenterTextIcon,
   GlobeAltIcon,
-  LightningBoltIcon,
+  BoltIcon,
   ScaleIcon,
-} from "@heroicons/react/outline";
+} from "@heroicons/react/24/outline";
 
 const features = [
   {
@@ -25,14 +25,14 @@ const features = [
     name: "Résultats rapides",
     description:
       "Il faut en moyenne 2 à 3 jours de récupération après une séance pour voir les douleurs s'atténuer complétement.",
-    icon: LightningBoltIcon,
+    icon: BoltIcon,
   },
   {
     id: 4,
     name: "Notifications mobiles",
     description:
       "Disponible par téléphone & email pour les contacts directs. Prise de rendez-vous possible sur doctolib.fr.",
-    icon: AnnotationIcon,
+    icon: ChatBubbleBottomCenterTextIcon,
   },
 ];
 

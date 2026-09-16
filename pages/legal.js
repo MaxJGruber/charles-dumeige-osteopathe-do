@@ -4,8 +4,8 @@ import { URL } from "root/config";
 import {
   CameraIcon,
   BookOpenIcon,
-  SupportIcon,
-} from "@heroicons/react/outline";
+  LifebuoyIcon,
+} from "@heroicons/react/24/outline";
 
 const supportLinks = [
   {
@@ -23,7 +23,7 @@ const supportLinks = [
       "Les cookies sont de petits fichiers texte qui sont stockés sur votre ordinateur lorsque vous visitez certains sites Web. Ce site Web utilise des cookies pour Google Analytics. Google Analytics est un outil d'analyse Web qui nous aide à comprendre comment les visiteurs interagissent avec ce site Web.",
       "Les cookies contiennent des informations qui sont transférées sur le disque dur de votre ordinateur. Ils stockent des informations, telles que l'heure à laquelle la visite en cours a eu lieu, si le visiteur a déjà visité le site et quel site a renvoyé le visiteur vers le site. Google Analytics collecte des informations de manière entièrement anonyme. Il rend compte des tendances du site Web sans identifier les visiteurs individuels.",
     ],
-    icon: SupportIcon,
+    icon: LifebuoyIcon,
   },
   {
     name: "Contenu visuel",

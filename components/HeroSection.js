@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Présentations", href: "/presentations" },
@@ -35,7 +35,7 @@ const HeroSection = ({
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightblue">
-                      <MenuIcon className="h-6 w-6" />
+                      <Bars3Icon className="h-6 w-6" />
                     </Popover.Button>
                   </div>
                 </div>
@@ -78,7 +78,7 @@ const HeroSection = ({
                   </Link>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightblue">
-                      <XIcon className="h-6 w-6" />
+                      <XMarkIcon className="h-6 w-6" />
                     </Popover.Button>
                   </div>
                 </div>

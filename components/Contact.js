@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { Fade } from "react-awesome-reveal";
-import { CheckIcon } from "@heroicons/react/outline";
+import { CheckIcon } from "@heroicons/react/24/outline";
 
 const Map = dynamic(() => import("components/Map"), {
   ssr: false,
