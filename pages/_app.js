@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         src="https://cdn.partoo.co/widget/prod/latest.js"
         data-token="a1c85f65-dfef-4160-b601-51456b0eecef"
         data-icon="message_logo_icon"
-        data-color="#39BFD6"
+        data-color="#0F6A8F"
         data-policy-url="https://app.partoo.co/privacy/messaging/cf575e9a-27ab-4581-b61c-321e22ed0b1c?lang=fr"
         data-country="FR"
       ></Script>
