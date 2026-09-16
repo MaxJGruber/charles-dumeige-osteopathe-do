@@ -1,9 +1,5 @@
-const Divider = () => (
-  <div className="relative">
-    <div className="absolute inset-0 flex items-center">
-      <div className="w-full border-t border-gray-300" />
-    </div>
-  </div>
-);
+// The spine: a hairline with a single red vertebra where two sections meet.
+// See the `.spine` rule in styles/globals.css.
+const Divider = () => <div className="spine" aria-hidden="true" />;
 
 export default Divider;
