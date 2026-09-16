@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "components/Reveal";
 
 const AboutSection = () => (
@@ -9,10 +10,12 @@ const AboutSection = () => (
             <Reveal animation="zoom" direction="top">
               <div className="flex justify-center">
                 <div className="relative w-3/4 py-72 rounded-2xl overflow-hidden ring-1 ring-ink/10">
-                  <img
-                    className="absolute inset-0 h-full w-full object-cover"
+                  <Image
+                    className="object-cover"
                     src="/static/profile-pic.jpg"
                     alt="Portrait de Charles Dumeige, ostéopathe D.O à Sartrouville"
+                    fill
+                    sizes="(max-width: 1024px) 75vw, 38vw"
                   />
                 </div>
               </div>

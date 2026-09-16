@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -15,10 +16,15 @@ const navigation = [
 
 const Logo = () => (
   <Link href="/" className="shrink-0">
-    <img
+    {/* In the header on every page, so it loads eagerly. Intrinsic size is
+        706x642; the height classes scale it and w-auto keeps the ratio. */}
+    <Image
       alt="Charles Dumeige, ostéopathe D.O"
       className="h-14 w-auto sm:h-16"
       src="/static/logo.png"
+      width={706}
+      height={642}
+      priority
     />
   </Link>
 );

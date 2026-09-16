@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "components/Reveal";
 
 const PregnantSection = () => (
@@ -8,10 +9,12 @@ const PregnantSection = () => (
           <div className="relative">
             <Reveal animation="fade" direction="left">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-ink/10">
-                <img
-                  className="absolute inset-0 h-full w-full object-cover"
+                <Image
+                  className="object-cover"
                   src="/static/istock-images/pregnant_small.jpeg"
                   alt="Femme enceinte lors d'une consultation d'ostéopathie"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 608px"
                 />
               </div>
             </Reveal>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { DOCTOLIB_URL } from "components/Nav";
@@ -39,10 +40,12 @@ const Footer = () => (
     <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
       <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
         <div>
-          <img
+          <Image
             alt="Charles Dumeige, ostéopathe D.O"
             className="h-20 w-auto"
             src="/static/logo.png"
+            width={706}
+            height={642}
           />
           <address className="mt-6 not-italic leading-relaxed text-ink-soft">
             20 rue René Brûlay

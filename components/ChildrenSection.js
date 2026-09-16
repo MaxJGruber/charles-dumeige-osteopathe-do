@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "components/Reveal";
 
 const ChildrenSection = () => (
@@ -8,10 +9,12 @@ const ChildrenSection = () => (
           <div className="relative">
             <Reveal animation="fade" direction="left">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-ink/10">
-                <img
-                  className="absolute inset-0 h-full w-full object-cover"
+                <Image
+                  className="object-cover"
                   src="/static/istock-images/childelbow_small.jpeg"
                   alt="Examen ostéopathique du coude d'un enfant"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 608px"
                 />
               </div>
             </Reveal>
@@ -96,10 +99,12 @@ const ChildrenSection = () => (
           <div className="relative lg:max-w-none lg:pt-10">
             <Reveal animation="fade" direction="right">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-ink/10">
-                <img
-                  className="absolute inset-0 h-full w-full object-cover"
+                <Image
+                  className="object-cover"
                   src="/static/istock-images/childleg_small.jpeg"
                   alt="Ostéopathe examinant la jambe d'un enfant"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 608px"
                 />
               </div>
             </Reveal>

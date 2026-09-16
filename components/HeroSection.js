@@ -1,6 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import Nav, { DOCTOLIB_URL } from "components/Nav";
 
+// Facts someone in pain wants before anything else: can I be seen, and how do
+// I get there. Kept to three so the row stays scannable.
 // Facts someone in pain wants before anything else: can I be seen, and how do
 // I get there. Kept to three so the row stays scannable.
 const reassurances = [
@@ -65,11 +68,18 @@ const HeroSection = ({
 
       {/* The photo runs to the container edge on large screens so the page
           opens on the practice itself rather than on a framed card. */}
-      <div className="relative">
-        <img
-          className="h-64 w-full rounded-3xl object-cover sm:h-96 lg:h-[34rem] lg:rounded-l-3xl lg:rounded-r-none"
-          src={image}
+      <div className="relative h-64 overflow-hidden rounded-3xl sm:h-96 lg:h-[34rem] lg:rounded-l-3xl lg:rounded-r-none">
+        {/* The photo runs to the container edge on large screens so the page
+            opens on the practice itself rather than on a framed card. It is
+            also the LCP element on every page, so it loads eagerly rather than
+            waiting for the lazy-load observer. */}
+        <Image
+          className="object-cover"
+          src={image.startsWith("/") ? image : `/${image}`}
           alt={imageAlt}
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 60vw"
         />
       </div>
     </div>

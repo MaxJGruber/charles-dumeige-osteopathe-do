@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "components/Reveal";
 
 const AdultSection = () => (
@@ -32,10 +33,12 @@ const AdultSection = () => (
           <div className="relative lg:max-w-none lg:pt-20">
             <Reveal animation="fade" direction="right">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-ink/10">
-                <img
-                  className="absolute inset-0 h-full w-full object-cover"
+                <Image
+                  className="object-cover"
                   src="/static/istock-images/adultspine_small.jpeg"
                   alt="Ostéopathe manipulant la colonne vertébrale d'un adulte"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 608px"
                 />
               </div>
             </Reveal>
@@ -123,10 +126,12 @@ const AdultSection = () => (
           <div className="relative lg:max-w-none lg:pt-0">
             <Reveal animation="fade" direction="left">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-ink/10">
-                <img
-                  className="absolute inset-0 h-full w-full object-cover"
+                <Image
+                  className="object-cover"
                   src="/static/istock-images/adultman_small.jpeg"
                   alt="Homme adulte souffrant de douleurs de dos"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 608px"
                 />
               </div>
             </Reveal>
