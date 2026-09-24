@@ -2,6 +2,7 @@ import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { URL } from "root/config";
 import Nav from "components/Nav";
+import { openCookieSettings } from "helpers/consent";
 
 const supportLinks = [
   {
@@ -13,11 +14,14 @@ const supportLinks = [
     ],
   },
   {
+    id: "cookies",
     name: "Politique relative aux cookies",
     description: [
-      "Les cookies sont de petits fichiers texte qui sont stockés sur votre ordinateur lorsque vous visitez certains sites Web. Ce site Web utilise des cookies pour Google Analytics. Google Analytics est un outil d'analyse Web qui nous aide à comprendre comment les visiteurs interagissent avec ce site Web.",
-      "Les cookies contiennent des informations qui sont transférées sur le disque dur de votre ordinateur. Ils stockent des informations, telles que l'heure à laquelle la visite en cours a eu lieu, si le visiteur a déjà visité le site et quel site a renvoyé le visiteur vers le site. Google Analytics collecte des informations de manière entièrement anonyme. Il rend compte des tendances du site Web sans identifier les visiteurs individuels.",
+      "Les cookies sont de petits fichiers texte déposés sur votre appareil lorsque vous visitez un site. Ce site n'utilise des cookies que pour la mesure d'audience, avec Google Analytics, qui nous aide à comprendre comment les visiteurs consultent le site.",
+      "Ces cookies (_ga et _ga_*) ne sont déposés qu'avec votre accord, donné via le bandeau affiché lors de votre première visite. Ils sont conservés 13 mois au maximum. Si vous refusez, Google Analytics n'est pas chargé et aucun cookie de mesure n'est déposé.",
+      "Votre choix est conservé 6 mois, après quoi il vous sera à nouveau demandé. Vous pouvez le modifier à tout moment :",
     ],
+    manageCookies: true,
   },
   {
     name: "Contenu visuel",
@@ -53,7 +57,7 @@ const Legal = () => (
     <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
       <div className="grid gap-x-12 gap-y-12 lg:grid-cols-3">
         {supportLinks.map((link) => (
-          <section key={link.name}>
+          <section key={link.name} id={link.id} className="scroll-mt-8">
             <h2 className="border-t border-rule pt-6 font-display text-xl leading-snug">
               {link.name}
             </h2>
@@ -62,6 +66,15 @@ const Legal = () => (
                 {line}
               </p>
             ))}
+            {link.manageCookies && (
+              <button
+                type="button"
+                onClick={openCookieSettings}
+                className="mt-4 rounded-full border border-teal px-5 py-2.5 text-[0.95rem] font-medium text-teal transition-colors hover:bg-teal-wash"
+              >
+                Gérer mes cookies
+              </button>
+            )}
           </section>
         ))}
       </div>

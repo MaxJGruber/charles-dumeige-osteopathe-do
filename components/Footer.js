@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { DOCTOLIB_URL } from "components/Nav";
+import { openCookieSettings } from "helpers/consent";
 
 const columns = [
   {
@@ -88,6 +89,13 @@ const Footer = () => (
           © {new Date().getFullYear()} Charles Dumeige, ostéopathe D.O
         </p>
         <div className="flex items-center gap-5">
+          <button
+            type="button"
+            onClick={openCookieSettings}
+            className="text-sm text-ink-soft transition-colors hover:text-teal"
+          >
+            Gestion des cookies
+          </button>
           <a
             href={DOCTOLIB_URL}
             target="_blank"
