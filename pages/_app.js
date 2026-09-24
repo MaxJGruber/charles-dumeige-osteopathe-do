@@ -11,10 +11,10 @@ import {
   META_DESCRIPTION,
   URL,
   META_IMAGE,
-  GA_TRACKING_ID,
   GEO,
 } from "root/config";
 import Footer from "components/Footer";
+import CookieConsent from "components/CookieConsent";
 import * as gtag from "helpers/gtag";
 
 // The FontAwesome stylesheet is imported above, so disable its runtime
@@ -46,20 +46,6 @@ function MyApp({ Component, pageProps }) {
         data-country="FR"
         data-avatar-image-url="https://cdn.partoo.co/avatar/prod/121527/2f029fc6-8db5-4ce6-9a80-10b60b0ade7b.jpeg"
       ></Script>
-      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      <Script
-        strategy="lazyOnload"
-        id="gtm-url"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-      ></Script>
-      <Script strategy="lazyOnload" id="gtm-script">{`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${GA_TRACKING_ID}', {
-        page_path: window.location.pathname,
-      });
-    `}</Script>
       <DefaultSeo
         title={TITLE}
         titleTemplate="%s"
@@ -105,6 +91,7 @@ function MyApp({ Component, pageProps }) {
       <NextNProgress />
       <Component {...pageProps} />
       <Footer />
+      <CookieConsent />
     </>
   );
 }
